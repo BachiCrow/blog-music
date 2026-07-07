@@ -11,7 +11,7 @@ portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mi
 const audio=document.getElementById("audio");
 const cover=document.getElementById("cover");
 const title=document.getElementById("song-title");
-
+a
 title.textContent=canciones[0].titulo;
 audio.src=canciones[0].audio;
 cover.src=canciones[0].portada;
