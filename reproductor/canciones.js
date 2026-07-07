@@ -1,4 +1,4 @@
-console.log("El archivo canciones.js se cargó correctamente");
+console.log("✅ canciones.js cargado");
 
 const canciones = [
 {
