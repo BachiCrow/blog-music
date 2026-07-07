@@ -1,3 +1,4 @@
+console.log("Player.js cargado correctamente");
 const playlist = [
 
 {
