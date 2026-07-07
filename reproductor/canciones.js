@@ -6,7 +6,7 @@ titulo:"3 Koopa Kingz - aNTOJE",
 
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
 
-portada:"https://raw.githubusercontent.com//BachiCrow/blog-music/main/covers/1-antoje.png"
+portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
 
 },
 
