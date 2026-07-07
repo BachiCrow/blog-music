@@ -2,31 +2,51 @@ const canciones=[
 
 {
 
-titulo:"Opening",
+titulo:"3 Koopa Kingz - aNTOJE",
 
-audio:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/musica/opening.mp3",
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
 
-portada:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/portadas/opening.jpg"
-
-},
-
-{
-
-titulo:"Ending",
-
-audio:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/musica/ending.mp3",
-
-portada:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/portadas/ending.jpg"
+portada:"https://raw.githubusercontent.com//BachiCrow/blog-music/main/covers/1-antoje.png"
 
 },
 
 {
 
-titulo:"Piano",
+titulo:"Ballora's Music Box",
 
-audio:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/musica/piano.mp3",
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
 
-portada:"https://raw.githubusercontent.com/TUUSUARIO/TUREPOSITORIO/main/portadas/piano.jpg"
+portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
+
+},
+
+{
+
+titulo:"Mice Circus - Coraline",
+
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
+
+portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
+
+},
+
+{
+
+titulo:"Steampianist Thing Feat",
+
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
+
+portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
+
+},
+
+{
+
+titulo:"Jester Creepy Circus",
+
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
+
+portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
 
 }
 
