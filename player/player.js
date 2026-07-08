@@ -21,10 +21,10 @@ const volume = document.getElementById("volume");
 const canciones=[
 
 {
-title: "Jester Playground",
-artist: "Robert Austin Music"
-audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
-cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
+title:"Jester Playground",
+artist:"Robert Austin Music"
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
 },
 
 {
@@ -88,22 +88,15 @@ cargarCancion();
 audio.play();
 
 });
-prevBtn.addEventListener("click",()=>{
+playBtn.addEventListener("click", () => {
 
-    indice--;
-
-    if(indice<0){
-
-        indice=canciones.length-1;
-
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
     }
 
-    cargarCancion();
-
-    audio.play();
-
 });
-
 nextBtn.addEventListener("click",()=>{
 
     indice++;
@@ -114,9 +107,10 @@ nextBtn.addEventListener("click",()=>{
 
     }
 
-    cargarCancion();
+title.textContent = playlist[indice].title;
+artist.textContent = playlist[indice].artist;
 
-    audio.play();
-
+audio.src = playlist[indice].audio;
+cover.src = playlist[indice].cover;
 });
 cargarCancion();
