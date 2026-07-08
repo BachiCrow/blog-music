@@ -1,10 +1,10 @@
 const canciones=[
 
 {
-title:"Jester Playground",
-artist:"Robert Austin Music"
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
+title: "Jester Playground",
+artist: "Robert Austin Music"
+audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
+cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
 },
 
 {
