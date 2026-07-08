@@ -103,7 +103,7 @@ function togglePlay() {
     } else {
         pauseSong();
     }
-
+}
 });
 
 loadSong(currentSong);
