@@ -1,3 +1,23 @@
+const audio = document.getElementById("audio");
+
+const cover = document.getElementById("cover");
+
+const title = document.getElementById("song-title");
+const artist = document.getElementById("song-artist");
+
+const playBtn = document.getElementById("play-song");
+const prevBtn = document.getElementById("prev-song");
+const nextBtn = document.getElementById("next-song");
+
+const playIcon = document.getElementById("play-icon");
+
+const progressBar = document.getElementById("progress-bar");
+const progress = document.getElementById("progress");
+
+const currentTime = document.getElementById("current-time");
+const duration = document.getElementById("duration");
+
+const volume = document.getElementById("volume");
 const canciones=[
 
 {
