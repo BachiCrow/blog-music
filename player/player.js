@@ -104,4 +104,6 @@ function togglePlay() {
 
 }
 
+playBtn.addEventListener("click", togglePlay);
+
 loadSong(currentSong);
