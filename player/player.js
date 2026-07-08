@@ -67,6 +67,8 @@ const volume = document.getElementById("volume");
 
 let currentSong = 0;
 
+let isPlaying = false;
+
 
 function loadSong(index){
 
@@ -81,28 +83,5 @@ function loadSong(index){
     audio.src = song.audio;
 
 }
-function playSong() {
 
-    audio.play();
-
-    isPlaying = true;
-
-}
-function pauseSong() {
-
-    audio.pause();
-
-    isPlaying = false;
-
-}
-function togglePlay() {
-
-    if (audio.paused) {
-        playSong();
-    } else {
-        pauseSong();
-    }
-
-}
-        
 loadSong(currentSong);
