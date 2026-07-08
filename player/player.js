@@ -67,6 +67,8 @@ const volume = document.getElementById("volume");
 
 let currentSong = 0;
 
+let isPlaying = false;
+
 
 function loadSong(index){
 
@@ -81,51 +83,5 @@ function loadSong(index){
     audio.src = song.audio;
 
 }
-function playSong() {
 
-    audio.play();
-
-    updatePlayIcon();
-
-}
-function pauseSong() {
-
-    audio.pause();
-
-    updatePlayIcon();
-
-}
-function togglePlay() {
-
-    if (audio.paused) {
-        playSong();
-    } else {
-        pauseSong();
-        
-}
-function updatePlayIcon() {
-
-    if (audio.paused) {
-
-        playIcon.src = "https://bachicrow.github.io/blog-music/icons/play.svg";
-        playIcon.alt = "Reproducir";
-
-    } else {
-
-        playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
-        playIcon.alt = "Pausar";
-
-    }
-
-}
-
-playBtn.addEventListener("click", togglePlay);
-audio.addEventListener("ended", () => {
-
-    updatePlayIcon();
-
-});
-    
 loadSong(currentSong);
-
-updatePlayIcon();
