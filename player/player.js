@@ -71,6 +71,7 @@ let isPlaying = false;
 
 
 function loadSong(index){
+
     const song = playlist[index];
 
     title.textContent = song.title;
