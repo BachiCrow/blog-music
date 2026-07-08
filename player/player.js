@@ -64,10 +64,10 @@ const duration = document.getElementById("duration");
 
 const volume = document.getElementById("volume");
 
+playBtn.addEventListener("click", togglePlay);
 
 let currentSong = 0;
 
-let isPlaying = false;
 
 
 function loadSong(index){
@@ -81,6 +81,29 @@ function loadSong(index){
     cover.src = song.cover;
 
     audio.src = song.audio;
+
+}
+function playSong() {
+
+    audio.play();
+
+    isPlaying = true;
+
+}
+function pauseSong() {
+
+    audio.pause();
+
+    isPlaying = false;
+
+}
+function togglePlay() {
+
+    if (audio.paused) {
+        playSong();
+    } else {
+        pauseSong();
+    }
 
 }
 
