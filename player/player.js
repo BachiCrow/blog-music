@@ -79,6 +79,28 @@ function loadSong(index){
     cover.src = song.cover;
 
     audio.src = song.audio;
+}
+function playSong() {
+
+    audio.play();
+
+    isPlaying = true;
+
+}
+function pauseSong() {
+
+    audio.pause();
+
+    isPlaying = false;
+
+}
+function togglePlay() {
+
+    if (audio.paused) {
+        playSong();
+    } else {
+        pauseSong();
+    }
 
 }
 
