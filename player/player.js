@@ -70,18 +70,3 @@ let currentSong = 0;
 let isPlaying = false;
 
 
-function loadSong(index){
-
-    const song = playlist[index];
-
-    title.textContent = song.title;
-
-    artist.textContent = song.artist;
-
-    cover.src = song.cover;
-
-    audio.src = song.audio;
-
-}
-
-loadSong(currentSong);
