@@ -1,33 +1,38 @@
 const canciones=[
 
 {
-titulo:"3 Koopa Kingz - aNTOJE",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
-portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
-},
-
-{
-titulo:"Ballora's Music Box",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
-portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
-},
-
-{
-titulo:"Mice Circus - Coraline",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
-portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
-},
-
-{
-titulo:"Steampianist - Thing",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
-portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
-},
-
-{
-titulo:"Jester Creepy Circus",
+title:"Jester Playground",
+artist:"Robert Austin Music"
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
-portada:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
+},
+
+{
+title:"Ballora's Music Box",
+artist:"Scott Cawthon"
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
+},
+
+{
+title:"Mice Circus - Coraline",
+artist:"LAIKA Studios"
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
+},
+
+{
+title:"Steampianist Thing Feat",
+artist:"flvtter - topic"
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
+},
+
+{
+title:"3 Koopa Kingz",
+artist:"aNTOJE"
+audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
+cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
 }
 
 ];
