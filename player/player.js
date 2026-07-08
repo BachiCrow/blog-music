@@ -119,9 +119,39 @@ function updatePlayIcon() {
     }
 
 }
-playBtn.addEventListener("click", togglePlay);
 
-audio.addEventListener("ended", () => {
+function nextSong() {
+
+    currentSong++;
+
+    if (currentSong >= playlist.length) {
+        currentSong = 0;
+    }
+
+    loadSong(currentSong);
+
+    playSong();
+
+}
+
+function previousSong() {
+
+    currentSong--;
+
+    if (currentSong < 0) {
+        currentSong = playlist.length - 1;
+    }
+
+    loadSong(currentSong);
+
+    playSong();
+
+}
+
+playBtn.addEventListener("click", togglePlay);
+prevBtn.addEventListener("click", previousSong);
+nextBtn.addEventListener("click", nextSong);
+audio.addEventListener("ended", nextSong);
 
     updatePlayIcon();
 
