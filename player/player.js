@@ -1,117 +1,126 @@
-const audio = document.getElementById("audio");
-
-const cover = document.getElementById("cover");
-
-const title = document.getElementById("song-title");
-const artist = document.getElementById("song-artist");
-
-const playBtn = document.getElementById("play-song");
-const prevBtn = document.getElementById("prev-song");
-const nextBtn = document.getElementById("next-song");
-
-const playIcon = document.getElementById("play-icon");
-
-const progressBar = document.getElementById("progress-bar");
-const progress = document.getElementById("progress");
-
-const currentTime = document.getElementById("current-time");
-const duration = document.getElementById("duration");
-
-const volume = document.getElementById("volume");
-const canciones=[
+const playlist = [
 
 {
 title:"Jester Playground",
-artist:"Robert Austin Music"
+artist:"Robert Austin Music",
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
 },
 
 {
 title:"Ballora's Music Box",
-artist:"Scott Cawthon"
+artist:"Scott Cawthon",
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
 },
 
 {
 title:"Mice Circus-Coraline",
-artist:"LAIKA Studios"
+artist:"LAIKA Studios",
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
 },
 
 {
 title:"Steampianist Thing Feat",
-artist:"flvtter-topic"
+artist:"flvtter-topic",
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
 },
 
 {
 title:"3 Koopa Kingz",
-artist:"aNTOJE"
+artist:"aNTOJE",
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
 }
 
 ];
 
-let indice=0;
+const audio = document.getElementById("audio");
 
-const audio=document.getElementById("audio");
-const cover=document.getElementById("cover");
-const title=document.getElementById("song-title");
-const prevBtn=document.getElementById("prev-song");
-const nextBtn=document.getElementById("next-song");
+const cover = document.getElementById("cover");
 
-function cargarCancion(){
+const title = document.getElementById("song-title");
 
-audio.src=canciones[indice].audio;
-cover.src=canciones[indice].portada;
-title.textContent=canciones[indice].titulo;
+const artist = document.getElementById("song-artist");
+
+const playBtn = document.getElementById("play-song");
+
+const prevBtn = document.getElementById("prev-song");
+
+const nextBtn = document.getElementById("next-song");
+
+const playIcon = document.getElementById("play-icon");
+
+const progressBar = document.getElementById("progress-bar");
+
+const progress = document.getElementById("progress");
+
+const currentTime = document.getElementById("current-time");
+
+const duration = document.getElementById("duration");
+
+const volume = document.getElementById("volume");
+
+let currentSong = 0;
+
+let isPlaying = false;
+
+function loadSong(index){
 
 }
 
-audio.addEventListener("ended",()=>{
-
-indice++;
-
-if(indice>=canciones.length){
-
-indice=0;
+function playSong(){
 
 }
 
-cargarCancion();
+function pauseSong(){
 
-audio.play();
+}
 
-});
-playBtn.addEventListener("click", () => {
+function togglePlay(){
 
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
+}
 
-});
-nextBtn.addEventListener("click",()=>{
+function nextSong(){
 
-    indice++;
+}
 
-    if(indice>=canciones.length){
+function previousSong(){
 
-        indice=0;
+}
 
-    }
+function updateProgress(){
 
-});
-title.textContent = playlist[indice].title;
-artist.textContent = playlist[indice].artist;
+}
 
-audio.src = playlist[indice].audio;
-cover.src = playlist[indice].cover;
+function setProgress(){
 
-cargarCancion();
+}
+
+function changeVolume(){
+
+}
+
+function formatTime(){
+
+}
+
+function updatePlayIcon(){
+
+}
+
+playBtn.addEventListener(...);
+
+nextBtn.addEventListener(...);
+
+prevBtn.addEventListener(...);
+
+audio.addEventListener(...);
+
+progressBar.addEventListener(...);
+
+volume.addEventListener(...);
+
+loadSong(currentSong);
