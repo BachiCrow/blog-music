@@ -156,8 +156,6 @@ nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("ended", nextSong);
 
-    updatePlayIcon();
-
 });
 
 loadSong(currentSong);
