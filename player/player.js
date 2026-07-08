@@ -35,7 +35,7 @@ cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ball
 },
 
 {
-title:"Mice Circus - Coraline",
+title:"Mice Circus-Coraline",
 artist:"LAIKA Studios"
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
@@ -43,7 +43,7 @@ cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice
 
 {
 title:"Steampianist Thing Feat",
-artist:"flvtter - topic"
+artist:"flvtter-topic"
 audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
 cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
 },
@@ -107,10 +107,11 @@ nextBtn.addEventListener("click",()=>{
 
     }
 
+});
 title.textContent = playlist[indice].title;
 artist.textContent = playlist[indice].artist;
 
 audio.src = playlist[indice].audio;
 cover.src = playlist[indice].cover;
-});
+
 cargarCancion();
