@@ -37,6 +37,7 @@ cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-anto
 
 ];
 
+
 const audio = document.getElementById("audio");
 
 const cover = document.getElementById("cover");
@@ -63,11 +64,22 @@ const duration = document.getElementById("duration");
 
 const volume = document.getElementById("volume");
 
+
 let currentSong = 0;
 
 let isPlaying = false;
 
+
 function loadSong(index){
+    const song = playlist[index];
+
+    title.textContent = song.title;
+
+    artist.textContent = song.artist;
+
+    cover.src = song.cover;
+
+    audio.src = song.audio;
 
 }
 
@@ -111,6 +123,7 @@ function updatePlayIcon(){
 
 }
 
+
 playBtn.addEventListener(...);
 
 nextBtn.addEventListener(...);
@@ -122,5 +135,6 @@ audio.addEventListener(...);
 progressBar.addEventListener(...);
 
 volume.addEventListener(...);
+
 
 loadSong(currentSong);
