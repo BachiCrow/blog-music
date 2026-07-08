@@ -1,41 +1,49 @@
+/*==========================================================
+=            PLAYLIST                                     =
+==========================================================*/
+
 const playlist = [
 
-{
-title:"Jester Playground",
-artist:"Robert Austin Music",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
-},
+    {
+        title: "Jester Playground",
+        artist: "Robert Austin Music",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/jester-creepy-circus-music.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-jester.png"
+    },
 
-{
-title:"Ballora's Music Box",
-artist:"Scott Cawthon",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
-},
+    {
+        title: "Ballora's Music Box",
+        artist: "Scott Cawthon",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
+    },
 
-{
-title:"Mice Circus-Coraline",
-artist:"LAIKA Studios",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
-},
+    {
+        title: "Mice Circus - Coraline",
+        artist: "LAIKA Studios",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
+    },
 
-{
-title:"Steampianist Thing Feat",
-artist:"flvtter-topic",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
-},
+    {
+        title: "Thing",
+        artist: "Steampianist",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
+    },
 
-{
-title:"3 Koopa Kingz",
-artist:"aNTOJE",
-audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
-cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
-}
+    {
+        title: "3 Koopa Kingz",
+        artist: "aNTOJE",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
+    }
 
 ];
+
+/*==========================================================
+=            ELEMENTOS HTML                               =
+==========================================================*/
 
 const audio = document.getElementById("audio");
 
@@ -63,10 +71,15 @@ const duration = document.getElementById("duration");
 
 const volume = document.getElementById("volume");
 
+/*==========================================================
+=            VARIABLES                                    =
+==========================================================*/
 
 let currentSong = 0;
 
-
+/*==========================================================
+=            FUNCIONES                                    =
+==========================================================*/
 function loadSong(index){
 
     const song = playlist[index];
@@ -80,84 +93,5 @@ function loadSong(index){
     audio.src = song.audio;
 
 }
-function playSong() {
-
-    audio.play();
-
-    updatePlayIcon();
-
-}
-function pauseSong() {
-
-    audio.pause();
-
-    updatePlayIcon();
-
-}
-function togglePlay() {
-
-    if (audio.paused) {
-        playSong();
-    } else {
-        pauseSong();
-    }
-
-}
-
-function updatePlayIcon() {
-
-    if (audio.paused) {
-
-        playIcon.src = "https://bachicrow.github.io/blog-music/icons/play.svg";
-        playIcon.alt = "Reproducir";
-
-    } else {
-
-        playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
-        playIcon.alt = "Pausar";
-
-    }
-
-}
-
-function nextSong() {
-
-    currentSong++;
-
-    if (currentSong >= playlist.length) {
-        currentSong = 0;
-    }
-
-    loadSong(currentSong);
-
-    playSong();
-
-}
-
-function previousSong() {
-
-    currentSong--;
-
-    if (currentSong < 0) {
-        currentSong = playlist.length - 1;
-    }
-
-    loadSong(currentSong);
-
-    playSong();
-
-}
-
-playBtn.addEventListener("click", togglePlay);
-
-prevBtn.addEventListener("click", previousSong);
-
-nextBtn.addEventListener("click", nextSong);
-
-audio.addEventListener("ended", nextSong);
-
-});
-
-loadSong(currentSong);
 
 updatePlayIcon();
