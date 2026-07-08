@@ -1,7 +1,3 @@
-/*==========================================================
-=            PLAYLIST                                     =
-==========================================================*/
-
 const playlist = [
 
     {
@@ -41,9 +37,6 @@ const playlist = [
 
 ];
 
-/*==========================================================
-=            ELEMENTOS HTML                               =
-==========================================================*/
 
 const audio = document.getElementById("audio");
 
@@ -71,15 +64,12 @@ const duration = document.getElementById("duration");
 
 const volume = document.getElementById("volume");
 
-/*==========================================================
-=            VARIABLES                                    =
-==========================================================*/
 
 let currentSong = 0;
 
-/*==========================================================
-=            FUNCIONES                                    =
-==========================================================*/
+let isPlaying = false;
+
+
 function loadSong(index){
 
     const song = playlist[index];
@@ -94,4 +84,4 @@ function loadSong(index){
 
 }
 
-updatePlayIcon();
+loadSong(currentSong);
