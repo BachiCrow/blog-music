@@ -148,6 +148,8 @@ function previousSong() {
 
 }
 
+playBtn.addEventListener("click", togglePlay);
+
 prevBtn.addEventListener("click", previousSong);
 
 nextBtn.addEventListener("click", nextSong);
