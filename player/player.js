@@ -79,12 +79,14 @@ function loadSong(index){
     cover.src = song.cover;
 
     audio.src = song.audio;
+
 }
-function playSong() {
+function togglePlay() {
 
-    audio.play();
-
-    updatePlayIcon();
+    if (audio.paused) {
+        playSong();
+    } else {
+        pauseSong();
 
 }
 function pauseSong() {
@@ -124,7 +126,7 @@ audio.addEventListener("ended", () => {
     updatePlayIcon();
 
 });
-
+    
 loadSong(currentSong);
 
 updatePlayIcon();
