@@ -118,7 +118,6 @@ function updatePlayIcon() {
 
 }
 
-
 playBtn.addEventListener("click", togglePlay);
 audio.addEventListener("ended", () => {
 
