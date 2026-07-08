@@ -68,7 +68,6 @@ const volume = document.getElementById("volume");
 let currentSong = 0;
 
 
-
 function loadSong(index){
 
     const song = playlist[index];
@@ -103,7 +102,7 @@ function togglePlay() {
     } else {
         pauseSong();
     }
-}
-});
 
+}
+        
 loadSong(currentSong);
