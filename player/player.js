@@ -104,6 +104,6 @@ function togglePlay() {
         pauseSong();
     }
 
-}
+});
 
 loadSong(currentSong);
