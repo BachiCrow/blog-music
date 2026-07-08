@@ -81,12 +81,11 @@ function loadSong(index){
     audio.src = song.audio;
 
 }
-function togglePlay() {
+function playSong() {
 
-    if (audio.paused) {
-        playSong();
-    } else {
-        pauseSong();
+    audio.play();
+
+    updatePlayIcon();
 
 }
 function pauseSong() {
