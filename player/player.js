@@ -145,6 +145,14 @@ function previousSong() {
     playSong();
 
 }
+function formatTime(seconds){
+
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+
+    return `${minutes}:${secs.toString().padStart(2,"0")}`;
+
+}
 playBtn.addEventListener("click", togglePlay);
 
 prevBtn.addEventListener("click", previousSong);
