@@ -159,7 +159,11 @@ prevBtn.addEventListener("click", previousSong);
 
 nextBtn.addEventListener("click", nextSong);
 
-audio.addEventListener("ended", nextSong);
+audio.addEventListener("loadedmetadata", () => {
+
+    duration.textContent = formatTime(audio.duration);
+
+});
 
 
 loadSong(currentSong);
