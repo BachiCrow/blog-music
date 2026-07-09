@@ -85,14 +85,14 @@ function playSong() {
 
     audio.play();
 
-    isPlaying = true;
+    updatePlayIcon();
 
 }
 function pauseSong() {
 
     audio.pause();
 
-    isPlaying = false;
+    updatePlayIcon();
 
 }
 function togglePlay() {
@@ -104,8 +104,29 @@ function togglePlay() {
     }
 
 }
+function updatePlayIcon() {
+
+    if (audio.paused) {
+
+        playIcon.src = "https://bachicrow.github.io/blog-music/icons/play.svg";
+        playIcon.alt = "Reproducir";
+
+    } else {
+
+        playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
+        playIcon.alt = "Pausar";
+
+    }
+
+}
 
 playBtn.addEventListener("click", togglePlay);
+audio.addEventListener("ended", () => {
 
+    updatePlayIcon();
+
+});
 
 loadSong(currentSong);
+
+updatePlayIcon();
