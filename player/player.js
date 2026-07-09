@@ -101,6 +101,7 @@ function togglePlay() {
         playSong();
     } else {
         pauseSong();
+    }
 
 }
 function updatePlayIcon() {
@@ -114,6 +115,8 @@ function updatePlayIcon() {
 
         playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
         playIcon.alt = "Pausar";
+
+    }
 
 }
 function nextSong() {
