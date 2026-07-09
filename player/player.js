@@ -129,3 +129,4 @@ audio.addEventListener("ended", () => {
 loadSong(currentSong);
 
 updatePlayIcon();
+
