@@ -124,7 +124,7 @@ audio.addEventListener("ended", () => {
 
     updatePlayIcon();
 
-}
+});
 
 loadSong(currentSong);
 
