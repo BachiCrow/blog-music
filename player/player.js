@@ -161,7 +161,7 @@ nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", () => {
 
-    currentTime.textContent = formatTime(audio.currentTime);
+    currentTime.textContent = "0:00";
 
     const percent = (audio.currentTime / audio.duration) * 100;
 
