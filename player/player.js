@@ -159,8 +159,13 @@ prevBtn.addEventListener("click", previousSong);
 
 nextBtn.addEventListener("click", nextSong);
 
-audio.addEventListener("timeupdate", () => {
+audio.addEventListener("loadedmetadata", () => {
+
     duration.textContent = formatTime(audio.duration);
+
+});
+
+audio.addEventListener("timeupdate", () => {
 
     currentTime.textContent = formatTime(audio.currentTime);
 
