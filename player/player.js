@@ -101,7 +101,6 @@ function togglePlay() {
         playSong();
     } else {
         pauseSong();
-    }
 
 }
 function updatePlayIcon() {
@@ -125,7 +124,7 @@ audio.addEventListener("ended", () => {
 
     updatePlayIcon();
 
-});
+
 
 loadSong(currentSong);
 
