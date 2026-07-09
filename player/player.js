@@ -150,7 +150,6 @@ nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("ended", nextSong);
 
-}
     
 loadSong(currentSong);
 
