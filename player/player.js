@@ -169,7 +169,6 @@ audio.addEventListener("timeupdate", () => {
 
 });
 
-
 loadSong(currentSong);
 
 updatePlayIcon();
