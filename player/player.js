@@ -113,7 +113,7 @@ function updatePlayIcon() {
 
     } else {
 
-        playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
+        playIcon.src = "https://bachicrow.github.io/blog-music/icons/pause.svg";
         playIcon.alt = "Pausar";
 
     }
