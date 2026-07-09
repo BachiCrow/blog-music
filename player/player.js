@@ -72,6 +72,8 @@ function loadSong(index){
 
     const song = playlist[index];
 
+    console.log(song);
+
     title.textContent = song.title;
 
     artist.textContent = song.artist;
@@ -176,5 +178,5 @@ audio.addEventListener("timeupdate", () => {
 });
 
 loadSong(currentSong);
-    console.log(song);
+
 updatePlayIcon();
