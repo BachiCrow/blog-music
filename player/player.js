@@ -115,17 +115,40 @@ function updatePlayIcon() {
         playIcon.src = "https://bachicrow.github.io/blog-music/icons/pausa.svg";
         playIcon.alt = "Pausar";
 
+}
+function nextSong() {
+
+    currentSong++;
+
+    if (currentSong >= playlist.length) {
+        currentSong = 0;
     }
 
-}
+    loadSong(currentSong);
 
+    playSong();
+
+}
+function previousSong() {
+
+    currentSong--;
+
+    if (currentSong < 0) {
+        currentSong = playlist.length - 1;
+    }
+
+    loadSong(currentSong);
+
+    playSong();
+
+}
+prevBtn.addEventListener("click", previousSong);
+nextBtn.addEventListener("click", nextSong);
 playBtn.addEventListener("click", togglePlay);
-audio.addEventListener("ended", () => {
-
-    updatePlayIcon();
-
-}
-
+audio.addEventListener("ended", nextSong);
+    
+});
+    
 loadSong(currentSong);
 
 updatePlayIcon();
