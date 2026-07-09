@@ -159,9 +159,13 @@ prevBtn.addEventListener("click", previousSong);
 
 nextBtn.addEventListener("click", nextSong);
 
-audio.addEventListener("loadedmetadata", () => {
+audio.addEventListener("timeupdate", () => {
 
-    duration.textContent = formatTime(audio.duration);
+    currentTime.textContent = formatTime(audio.currentTime);
+
+    const percent = (audio.currentTime / audio.duration) * 100;
+
+    progress.style.width = percent + "%";
 
 });
 
