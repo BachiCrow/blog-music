@@ -80,8 +80,6 @@ function loadSong(index){
 
     audio.src = song.audio;
 
-    console.log(song);
-
 }
 function playSong() {
 
@@ -178,5 +176,5 @@ audio.addEventListener("timeupdate", () => {
 });
 
 loadSong(currentSong);
-
+    console.log(song);
 updatePlayIcon();
