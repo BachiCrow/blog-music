@@ -70,7 +70,11 @@ let currentSong = 0;
 
 function loadSong(index){
 
+    console.log("loadSong ejecutada");
+
     const song = playlist[index];
+
+    console.log(song);
 
     title.textContent = song.title;
 
