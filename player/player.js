@@ -72,6 +72,8 @@ function loadSong(index){
 
     const song = playlist[index];
 
+    title.textContent = song.title;
+
     artist.textContent = song.artist;
 
     cover.src = song.cover;
