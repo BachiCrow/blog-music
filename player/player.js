@@ -159,6 +159,8 @@ prevBtn.addEventListener("click", previousSong);
 
 nextBtn.addEventListener("click", nextSong);
 
+title.textContent = song.title;
+
 audio.addEventListener("loadedmetadata", () => {
 
     duration.textContent = formatTime(audio.duration);
