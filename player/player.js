@@ -79,7 +79,9 @@ function loadSong(index){
     console.log(song);
 
     title.textContent = song.title;
-
+    
+    console.log("Título después de asignarlo:", title.textContent);
+    
     artist.textContent = song.artist;
 
     cover.src = song.cover;
