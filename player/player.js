@@ -22,8 +22,8 @@ const playlist = [
     },
 
     {
-        title: "Thing",
-        artist: "Steampianist",
+        title: "Steampianist Thing Feat",
+        artist: "flvtter - tema",
         audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
         cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
     },
