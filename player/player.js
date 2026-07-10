@@ -43,8 +43,10 @@ const audio = document.getElementById("audio");
 const cover = document.getElementById("cover");
 
 const title = document.getElementById("song-title");
-
 const artist = document.getElementById("song-artist");
+
+console.log(title);
+console.log(artist);
 
 const playBtn = document.getElementById("play-song");
 
