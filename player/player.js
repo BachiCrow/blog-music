@@ -192,15 +192,12 @@ progressBar.addEventListener("click", (e) => {
     audio.currentTime = (clickX / width) * duration;
 
 });
-playBtn.addEventListener("click", togglePlay);
 
-prevBtn.addEventListener("click", previousSong);
+shuffleBtn.addEventListener("click", () => {
 
-nextBtn.addEventListener("click", nextSong);
+    shuffleMode = !shuffleMode;
 
-audio.addEventListener("loadedmetadata", () => {
-
-    duration.textContent = formatTime(audio.duration);
+    shuffleBtn.classList.toggle("active", shuffleMode);
 
 });
 // =====================
@@ -218,6 +215,18 @@ audio.addEventListener("timeupdate", () => {
 volume.addEventListener("input", () => {
 
     audio.volume = volume.value;
+
+});
+
+playBtn.addEventListener("click", togglePlay);
+
+prevBtn.addEventListener("click", previousSong);
+
+nextBtn.addEventListener("click", nextSong);
+
+audio.addEventListener("loadedmetadata", () => {
+
+    duration.textContent = formatTime(audio.duration);
 
 });
 
