@@ -234,16 +234,6 @@ audio.addEventListener("ended", () => {
     playSong();
 });
 
-shuffleBtn.addEventListener("click", () => {
-
-    shuffleMode = !shuffleMode;
-
-    shuffleBtn.classList.toggle("active", shuffleMode);
-    
-    loadSong(currentSong);
-    playSong();
-});
-
 // =====================
 // INICIADORES
 // =====================
