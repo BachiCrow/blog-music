@@ -73,12 +73,19 @@ const duration = document.getElementById("duration");
 
 const volume = document.getElementById("volume");
 
+const shuffleBtn = document.getElementById("shuffle-song");
 
+// =====================
+// VARIABLES
+// =====================
 let currentSong = 0;
 
 let shuffleMode = false;
 shuffleMode = !shuffleMode;
 
+// =====================
+// FUNCIONES
+// =====================
 function loadSong(index){
 
     console.log("loadSong ejecutada");
@@ -170,6 +177,9 @@ function formatTime(seconds){
     return `${minutes}:${secs.toString().padStart(2,"0")}`;
 
 }
+// =====================
+// EVENTOS DE BOTONES
+// =====================
 progressBar.addEventListener("click", (e) => {
 
     const width = progressBar.clientWidth;
@@ -191,8 +201,16 @@ audio.addEventListener("loadedmetadata", () => {
 
     duration.textContent = formatTime(audio.duration);
 
-});
+shuffleBtn.addEventListener("click", () => {
 
+    shuffleMode = !shuffleMode;
+
+    shuffleBtn.classList.toggle("active", shuffleMode);
+
+});
+// =====================
+// EVENTOS DEL AUDIO
+// =====================
 audio.addEventListener("timeupdate", () => {
 
     currentTime.textContent = formatTime(audio.currentTime);
@@ -210,30 +228,44 @@ volume.addEventListener("input", () => {
 
 audio.addEventListener("ended", () => {
 
-    currentSong++;
-
-    if (currentSong >= playlist.length) {
-        currentSong = 0;
-    }
-
-
     if (shuffleMode) {
 
-    currentSong = Math.floor(Math.random() * playlist.length);
+        // Si solo hay una canción
+        if (playlist.length === 1) {
 
-} else {
+            currentSong = 0;
 
-    currentSong++;
+        } else {
 
-    if (currentSong >= playlist.length) {
-        currentSong = 0;
+            let randomSong;
+
+            do {
+
+                randomSong = Math.floor(Math.random() * playlist.length);
+
+            } while (randomSong === currentSong);
+
+            currentSong = randomSong;
+
+        }
+
+    } else {
+
+        currentSong++;
+
+        if (currentSong >= playlist.length) {
+            currentSong = 0;
+        }
+
     }
 
-}
     loadSong(currentSong);
     playSong();
-});
 
+});
+// =====================
+// INICIADORES
+// =====================
 loadSong(currentSong);
 
 updatePlayIcon();
