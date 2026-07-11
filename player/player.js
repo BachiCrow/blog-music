@@ -192,14 +192,6 @@ progressBar.addEventListener("click", (e) => {
     audio.currentTime = (clickX / width) * duration;
 
 });
-
-shuffleBtn.addEventListener("click", () => {
-
-    shuffleMode = !shuffleMode;
-
-    shuffleBtn.classList.toggle("active", shuffleMode);
-
-});
 // =====================
 // EVENTOS DEL AUDIO
 // =====================
