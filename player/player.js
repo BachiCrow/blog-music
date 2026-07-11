@@ -9,7 +9,7 @@ const playlist = [
 
     {
         title: "Ballora's Music Box",
-        artist: "Scott Cawthon",
+        artist: "FNAF Sister Location",
         audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
         cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
     },
