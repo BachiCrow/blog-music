@@ -39,7 +39,7 @@ const playlist = [
         title: "3 Koopa Kingz",
         artist: "aNTOJE",
         audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
-        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-antoje.png"
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-lucky.gif"
     }
 
 ];
