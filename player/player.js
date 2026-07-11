@@ -161,6 +161,17 @@ function formatTime(seconds){
     return `${minutes}:${secs.toString().padStart(2,"0")}`;
 
 }
+progressBar.addEventListener("click", (e) => {
+
+    const width = progressBar.clientWidth;
+
+    const clickX = e.offsetX;
+
+    const duration = audio.duration;
+
+    audio.currentTime = (clickX / width) * duration;
+
+});
 playBtn.addEventListener("click", togglePlay);
 
 prevBtn.addEventListener("click", previousSong);
