@@ -193,6 +193,11 @@ audio.addEventListener("timeupdate", () => {
     progress.style.width = percent + "%";
 
 });
+volume.addEventListener("input", () => {
+
+    audio.volume = volume.value;
+
+});
 
 loadSong(currentSong);
 
