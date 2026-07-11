@@ -1,1 +1,18 @@
+#calendar{
 
+    width:100%;
+    max-width:320px;
+    margin:auto;
+
+    background:#C8C3E0;
+
+    border:3px solid #220057;
+    border-radius:16px;
+
+    padding:16px;
+
+    box-sizing:border-box;
+
+    font-family:Arial, sans-serif;
+
+}
