@@ -228,35 +228,10 @@ volume.addEventListener("input", () => {
 
 audio.addEventListener("ended", () => {
 
-    if (shuffleMode) {
+    currentSong++;
 
-        // Si solo hay una canción
-        if (playlist.length === 1) {
-
-            currentSong = 0;
-
-        } else {
-
-            let randomSong;
-
-            do {
-
-                randomSong = Math.floor(Math.random() * playlist.length);
-
-            } while (randomSong === currentSong);
-
-            currentSong = randomSong;
-
-        }
-
-    } else {
-
-        currentSong++;
-
-        if (currentSong >= playlist.length) {
-            currentSong = 0;
-        }
-
+    if (currentSong >= playlist.length) {
+        currentSong = 0;
     }
 
     loadSong(currentSong);
