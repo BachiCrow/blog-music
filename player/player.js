@@ -232,10 +232,35 @@ audio.addEventListener("loadedmetadata", () => {
 
 audio.addEventListener("ended", () => {
 
-    currentSong++;
+    if (shuffleMode) {
 
-    if (currentSong >= playlist.length) {
-        currentSong = 0;
+        // Si solo hay una canción
+        if (playlist.length === 1) {
+
+            currentSong = 0;
+
+        } else {
+
+            let randomSong;
+
+            do {
+
+                randomSong = Math.floor(Math.random() * playlist.length);
+
+            } while (randomSong === currentSong);
+
+            currentSong = randomSong;
+
+        }
+
+    } else {
+
+        currentSong++;
+
+        if (currentSong >= playlist.length) {
+            currentSong = 0;
+        }
+
     }
 
     loadSong(currentSong);
