@@ -1,15 +1,15 @@
 #calendar{
 
-    width: 100 %;
-    max-width:320 px;
+    width:100%;
+    max-width:320px;
     margin:auto;
 
     background:#C8C3E0;
 
-    border:3 px solid #220057;
-    border-radius:16 px;
+    border:3px solid #220057;
+    border-radius:16px;
 
-    padding:16 px;
+    padding:16px;
 
     box-sizing:border-box;
 
