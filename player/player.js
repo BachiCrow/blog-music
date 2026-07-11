@@ -8,6 +8,13 @@ const playlist = [
     },
 
     {
+        title: "Run Rabbit",
+        artist: "Mollie Elizabeth",
+        audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mollie-elizabeth-run-rabbit.mp3",
+        cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-runrabbit.png"
+    },
+
+    {
         title: "Ballora's Music Box",
         artist: "FNAF Sister Location",
         audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
