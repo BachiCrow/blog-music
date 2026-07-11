@@ -83,6 +83,8 @@ let currentSong = 0;
 
 let shuffleMode = false;
 
+let isDragging = false;
+
 // =====================
 // FUNCIONES
 // =====================
@@ -198,6 +200,44 @@ shuffleBtn.addEventListener("click", () => {
     shuffleBtn.classList.toggle("active", shuffleMode);
 
 });
+
+progressBar.addEventListener("mousedown", () => {
+    isDragging = true;
+});
+
+document.addEventListener("mousemove", (e) => {
+
+    if (!isDragging) return;
+
+    const rect = progressBar.getBoundingClientRect();
+
+    let offset = e.clientX - rect.left;
+
+    if (offset < 0) offset = 0;
+    if (offset > rect.width) offset = rect.width;
+
+    const percent = offset / rect.width;
+
+    progress.style.width = (percent * 100) + "%";
+});
+
+document.addEventListener("mouseup", (e) => {
+
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const rect = progressBar.getBoundingClientRect();
+
+    let offset = e.clientX - rect.left;
+
+    if (offset < 0) offset = 0;
+    if (offset > rect.width) offset = rect.width;
+
+    const percent = offset / rect.width;
+
+    audio.currentTime = percent * audio.duration;
+});
 // =====================
 // EVENTOS DEL AUDIO
 // =====================
@@ -205,11 +245,12 @@ audio.addEventListener("timeupdate", () => {
 
     currentTime.textContent = formatTime(audio.currentTime);
 
+if (!isDragging) {
     const percent = (audio.currentTime / audio.duration) * 100;
-
     progress.style.width = percent + "%";
-
+    
 });
+
 volume.addEventListener("input", () => {
 
     audio.volume = volume.value;
