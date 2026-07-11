@@ -222,14 +222,6 @@ audio.addEventListener("loadedmetadata", () => {
 
 });
 
-shuffleBtn.addEventListener("click", () => {
-
-    shuffleMode = !shuffleMode;
-
-    shuffleBtn.classList.toggle("active", shuffleMode);
-
-});
-
 audio.addEventListener("ended", () => {
 
     currentSong++;
@@ -237,11 +229,21 @@ audio.addEventListener("ended", () => {
     if (currentSong >= playlist.length) {
         currentSong = 0;
     }
-
+    
     loadSong(currentSong);
     playSong();
-
 });
+
+shuffleBtn.addEventListener("click", () => {
+
+    shuffleMode = !shuffleMode;
+
+    shuffleBtn.classList.toggle("active", shuffleMode);
+    
+    loadSong(currentSong);
+    playSong();
+});
+
 // =====================
 // INICIADORES
 // =====================
