@@ -229,47 +229,20 @@ audio.addEventListener("loadedmetadata", () => {
 
 });
 
+shuffleBtn.addEventListener("click", () => {
+
+    shuffleMode = !shuffleMode;
+
+    shuffleBtn.classList.toggle("active", shuffleMode);
+
+});
+
 audio.addEventListener("ended", () => {
 
     currentSong++;
 
     if (currentSong >= playlist.length) {
         currentSong = 0;
-    }
-    
-});
-
-audio.addEventListener("ended", () => {
-
-    if (shuffleMode) {
-
-        // Si solo hay una canción
-        if (playlist.length === 1) {
-
-            currentSong = 0;
-
-        } else {
-
-            let randomSong;
-
-            do {
-
-                randomSong = Math.floor(Math.random() * playlist.length);
-
-            } while (randomSong === currentSong);
-
-            currentSong = randomSong;
-
-        }
-
-    } else {
-
-        currentSong++;
-
-        if (currentSong >= playlist.length) {
-            currentSong = 0;
-        }
-
     }
 
     loadSong(currentSong);
