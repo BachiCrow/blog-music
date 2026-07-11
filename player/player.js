@@ -245,10 +245,10 @@ audio.addEventListener("timeupdate", () => {
 
     currentTime.textContent = formatTime(audio.currentTime);
 
-if (!isDragging) {
     const percent = (audio.currentTime / audio.duration) * 100;
+
     progress.style.width = percent + "%";
-    
+
 });
 
 volume.addEventListener("input", () => {
