@@ -210,7 +210,14 @@ volume.addEventListener("input", () => {
 
 audio.addEventListener("ended", () => {
 
-if (shuffleMode) {
+    currentSong++;
+
+    if (currentSong >= playlist.length) {
+        currentSong = 0;
+    }
+
+
+    if (shuffleMode) {
 
     currentSong = Math.floor(Math.random() * playlist.length);
 
@@ -223,7 +230,8 @@ if (shuffleMode) {
     }
 
 }
-
+    loadSong(currentSong);
+    playSong();
 });
 
 loadSong(currentSong);
