@@ -50,6 +50,7 @@ const audio = document.getElementById("audio");
 const cover = document.getElementById("cover");
 
 const title = document.getElementById("song-title");
+
 const artist = document.getElementById("song-artist");
 
 console.log(title);
@@ -200,12 +201,6 @@ nextBtn.addEventListener("click", nextSong);
 audio.addEventListener("loadedmetadata", () => {
 
     duration.textContent = formatTime(audio.duration);
-
-shuffleBtn.addEventListener("click", () => {
-
-    shuffleMode = !shuffleMode;
-
-    shuffleBtn.classList.toggle("active", shuffleMode);
 
 });
 // =====================
