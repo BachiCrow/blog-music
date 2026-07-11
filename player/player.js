@@ -75,7 +75,9 @@ const volume = document.getElementById("volume");
 
 
 let currentSong = 0;
+
 let shuffleMode = false;
+shuffleMode = !shuffleMode;
 
 function loadSong(index){
 
