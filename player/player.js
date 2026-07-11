@@ -82,8 +82,6 @@ const shuffleBtn = document.getElementById("shuffle-song");
 let currentSong = 0;
 
 let shuffleMode = false;
-shuffleMode = !shuffleMode;
-shuffleBtn.classList.toggle("active", shuffleMode);
 
 // =====================
 // FUNCIONES
