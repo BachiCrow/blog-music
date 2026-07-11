@@ -206,6 +206,19 @@ volume.addEventListener("input", () => {
 
 });
 
+audio.addEventListener("ended", () => {
+
+    currentSong++;
+
+    if (currentSong >= playlist.length) {
+        currentSong = 0;
+    }
+
+    loadSong(currentSong);
+    playSong();
+
+});
+
 loadSong(currentSong);
 
 updatePlayIcon();
