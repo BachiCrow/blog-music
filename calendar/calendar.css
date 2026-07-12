@@ -35,7 +35,23 @@
 /*==================================================
 =            ENCABEZADO
 ==================================================*/
+.cal-title{
 
+    margin:0 0 18px;
+
+    text-align:center;
+
+    font-family:"Segoe UI", Arial, sans-serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#F0623E;
+
+    letter-spacing:1px;
+
+}
 
 
 /*==================================================
