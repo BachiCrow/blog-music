@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const cell = document.createElement("div");
 
-            cell.className = "day";
+            cell.className = "cal-day";
             cell.textContent = day;
 
             if(
