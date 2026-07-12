@@ -1,135 +1,67 @@
+/*==================================================
+=            CALENDAR 1.0 - VARIABLES
+==================================================*/
 :root{
 
     --calendar-bg:#FFE4C6;
     --calendar-border:#F0623E;
-    --calendar-title:#F0623E;
-    --calendar-text:#5A4A42;
-    --calendar-hover:#F9A336;
-    --calendar-today:#F0623E;
-    --calendar-today-text:#FFFFFF;
-    --calendar-shadow:rgba(240,98,62,.25);
 
 }
 
+
+/*==================================================
+=            CONTENEDOR PRINCIPAL
+==================================================*/
 #calendar{
 
-    font-family:"Segoe UI", Arial, sans-serif;
-    font-size:16px;
-    background:var(--calendar-bg);
-    border:3px solid var(--calendar-border);
-    box-shadow:0 6px 18px var(--calendar-shadow);
     width:100%;
     max-width:320px;
+
     margin:auto;
+
     padding:16px;
-    box-sizing:border-box;
-    border-radius:18px;
-
-}
-
-#calendar *{
-
-    font-size:inherit;
-
-}
-
-.calendar-title{
-
-    font-size:24px;
-
-}
-
-.weekday{
-
-    font-size:16px;
-
-}
-
-.day{
-
-    font-size:16px;
-
-}
-
-.calendar-title{
-
-    color:var(--calendar-title);
-
-}
-
-.weekday{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    color:var(--calendar-title);
-
-}
-
-.calendar-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(7,1fr);
-
-    gap:6px;
-
-}
-
-.day{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:100%;
-
-    aspect-ratio:1/1;
-
-    min-height:34px;
-
-    font-size:15px;
-
-    line-height:1;
-
-    color:var(--calendar-text);
-
-    border-radius:8px;
 
     box-sizing:border-box;
 
-    transition:.2s;
+    background:var(--calendar-bg);
+
+    border:3px solid var(--calendar-border);
+
+    border-radius:22px;
 
 }
 
-.day:hover{
 
-    background:var(--calendar-hover);
+/*==================================================
+=            ENCABEZADO
+==================================================*/
 
-}
 
-.today{
 
-    background:var(--calendar-today);
-    color:var(--calendar-today-text);
+/*==================================================
+=            DÍAS DE LA SEMANA
+==================================================*/
 
-}
 
-.calendar-grid > div{
 
-    display:flex;
+/*==================================================
+=            CUADRÍCULA DEL CALENDARIO
+==================================================*/
 
-    align-items:center;
 
-    justify-content:center;
 
-}
+/*==================================================
+=            CELDAS DE LOS DÍAS
+==================================================*/
+
+
+
+/*==================================================
+=            EFECTOS HOVER
+==================================================*/
+
+
+
+/*==================================================
+=            DÍA ACTUAL
+==================================================*/
