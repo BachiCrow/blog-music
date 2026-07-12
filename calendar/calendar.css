@@ -57,7 +57,35 @@
 /*==================================================
 =            DÍAS DE LA SEMANA
 ==================================================*/
+.cal-weekdays{
 
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    margin-bottom:14px;
+
+}
+
+.cal-weekday{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:"Segoe UI", Arial, sans-serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#F0623E;
+
+    user-select:none;
+
+}
 
 
 /*==================================================
