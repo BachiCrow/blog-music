@@ -1,31 +1,27 @@
+:root{
+
+    --calendar-bg:#FFE4C6;
+    --calendar-border:#F0623E;
+    --calendar-title:#F0623E;
+    --calendar-text:#5A4A42;
+    --calendar-hover:#F9A336;
+    --calendar-today:#F0623E;
+    --calendar-today-text:#FFFFFF;
+    --calendar-shadow:rgba(240,98,62,.25);
+
+}
+
 #calendar{
 
-    width:100%;
-    max-width:320px;
-
-    margin:auto;
-
-    background:#C8C3E0;
-
-    border:3px solid #220057;
-
-    border-radius:18px;
-
-    padding:16px;
-
-    box-sizing:border-box;
-
-    font-family: Arial,sans-serif;
+    background:var(--calendar-bg);
+    border:3px solid var(--calendar-border);
+    box-shadow:0 6px 18px var(--calendar-shadow);
 
 }
 
 .calendar-title{
 
-    text-align:center;
-
-    color:#220057;
-
-    margin:0 0 18px;
+    color:var(--calendar-title);
 
 }
 
@@ -57,34 +53,19 @@
 
 .day{
 
-    height:34px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:10px;
-
-    cursor:default;
-
-    transition:.25s;
+    color:var(--calendar-text);
 
 }
 
 .day:hover{
 
-    background:#EBC881;
+    background:var(--calendar-hover);
 
 }
 
 .today{
 
-    background:#962A14;
-
-    color:white;
-
-    font-weight:bold;
+    background:var(--calendar-today);
+    color:var(--calendar-today-text);
 
 }
