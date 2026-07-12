@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         calendar.appendChild(title);
 
         const week = document.createElement("div");
-        week.className = "weekdays";
+        week.className = "cal-weekdays";
 
         weekDays.forEach(day =>{
 
             const cell = document.createElement("div");
             cell.textContent = day;
-            cell.className = "weekday";
+            cell.className = "cal-weekday";
 
             week.appendChild(cell);
 
