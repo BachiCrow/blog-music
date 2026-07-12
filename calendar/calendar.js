@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 year === today.getFullYear()
             ){
 
-                cell.classList.add("today");
+                cell.classList.add("cal-today");
 
             }
 
