@@ -15,11 +15,11 @@
 #calendar{
 
     width:100%;
-    max-width:300px;
+    max-width:260px;
 
     margin:auto;
 
-    padding:16px;
+    padding:12px;
 
     box-sizing:border-box;
 
@@ -27,7 +27,7 @@
 
     border:3px solid var(--calendar-border);
 
-    border-radius:22px;
+    border-radius:18px;
 
 }
 
@@ -37,22 +37,21 @@
 ==================================================*/
 .cal-title{
 
-    margin:0 0 18px;
+    margin:0 0 14px;
 
     text-align:center;
 
     font-family:"Segoe UI", Arial, sans-serif;
 
-    font-size:28px;
+    font-size:22px;
 
     font-weight:700;
 
     color:#F0623E;
 
-    letter-spacing:1px;
+    letter-spacing:.5px;
 
 }
-
 
 /*==================================================
 =            DÍAS DE LA SEMANA
@@ -61,11 +60,11 @@
 
     display:grid;
 
-    grid-template-columns:repeat(7, minmax(0, 1fr));
+    grid-template-columns:repeat(7,minmax(0,1fr));
 
-    gap:4px;
+    gap:3px;
 
-    margin-bottom:14px;
+    margin-bottom:10px;
 
 }
 
@@ -79,7 +78,7 @@
 
     font-family:"Segoe UI", Arial, sans-serif;
 
-    font-size:18px;
+    font-size:16px;
 
     font-weight:700;
 
@@ -96,9 +95,9 @@
 
     display:grid;
 
-    grid-template-columns:repeat(7, minmax(0, 1fr));
+    grid-template-columns:repeat(7,minmax(0,1fr));
 
-    gap:4px;
+    gap:3px;
 
     width:100%;
 
@@ -117,7 +116,6 @@
 /*==================================================
 =            CELDAS DEL CALENDARIO
 ==================================================*/
-
 .cal-day{
 
     display:flex;
@@ -128,11 +126,15 @@
 
     aspect-ratio:1/1;
 
-    border-radius:10px;
+    min-height:28px;
+
+    white-space:nowrap;
+
+    border-radius:8px;
 
     font-family:"Segoe UI", Arial, sans-serif;
 
-    font-size:18px;
+    font-size:16px;
 
     font-weight:500;
 
@@ -142,12 +144,12 @@
 
     user-select:none;
 
-    transition:background .2s ease,
-               color .2s ease,
-               transform .15s ease;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .15s ease;
 
 }
-
 /*==================================================
 =            CELDAS DE LOS DÍAS
 ==================================================*/
