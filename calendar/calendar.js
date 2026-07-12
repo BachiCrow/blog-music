@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         calendar.appendChild(week);
 
         const grid = document.createElement("div");
-        grid.className = "calendar-grid";
+        grid.className = "cal-grid";
 
         const firstDay = new Date(year, month, 1);
 
