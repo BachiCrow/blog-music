@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for(let i=0;i<start;i++){
 
-            const empty = document.createElement("div");
+            const empty = document.createElement("span");
             grid.appendChild(empty);
 
         }
 
         for(let day=1;day<=daysInMonth;day++){
 
-            const cell = document.createElement("div");
+            const cell = document.createElement("span");
 
             cell.className = "cal-day";
             cell.textContent = day;
