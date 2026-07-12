@@ -61,7 +61,9 @@
 
     display:grid;
 
-    grid-template-columns:repeat(7,1fr);
+    grid-template-columns:repeat(7, minmax(0, 1fr));
+
+    gap:4px;
 
     margin-bottom:14px;
 
@@ -95,11 +97,13 @@
 
     display:grid;
 
-    grid-template-columns:repeat(7,1fr);
+    grid-template-columns:repeat(7, minmax(0, 1fr));
 
-    gap:8px;
+    gap:4px;
 
     width:100%;
+
+    box-sizing:border-box;
 
 }
 
@@ -112,8 +116,6 @@
 .cal-day{
 
     outline:1px solid red;
-
-    min-width:32px;
 
     min-height:32px;
 
