@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const title = document.createElement("h2");
         title.textContent = `${months[month]} ${year}`;
-        title.className = "calendar-title";
+        title.className = "cal-title";
 
         calendar.appendChild(title);
 
