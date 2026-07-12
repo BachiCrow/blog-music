@@ -12,16 +12,9 @@
 }
 
 #calendar{
-    width:100%;
-    max-width:320px;
-    margin:auto;
-    padding:16px;
-    box-sizing:border-box;
-    border-radius:18px;
+
     font-family:"Segoe UI", Arial, sans-serif;
-    background:var(--calendar-bg);
-    border:3px solid var(--calendar-border);
-    box-shadow:0 6px 18px var(--calendar-shadow);
+    font-size:16px;
 
 }
 
