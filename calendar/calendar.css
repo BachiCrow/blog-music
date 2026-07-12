@@ -47,7 +47,7 @@
 
 .day{
 
-    font-size:10px;
+    font-size:16px;
 
 }
 
@@ -57,17 +57,17 @@
 
 }
 
-.weekdays{
+.weekday{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(7,1fr);
+    justify-content:center;
 
-    text-align:center;
+    align-items:center;
+
+    font-size:16px;
 
     font-weight:bold;
-
-    margin-bottom:10px;
 
     color:var(--calendar-title);
 
