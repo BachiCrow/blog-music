@@ -12,11 +12,40 @@
 }
 
 #calendar{
-
+    width:100%;
+    max-width:320px;
+    margin:auto;
+    padding:16px;
+    box-sizing:border-box;
+    border-radius:18px;
     font-family:"Segoe UI", Arial, sans-serif;
     background:var(--calendar-bg);
     border:3px solid var(--calendar-border);
     box-shadow:0 6px 18px var(--calendar-shadow);
+
+}
+
+#calendar *{
+
+    font-size:inherit;
+
+}
+
+.calendar-title{
+
+    font-size:24px;
+
+}
+
+.weekday{
+
+    font-size:16px;
+
+}
+
+.day{
+
+    font-size:16px;
 
 }
 
@@ -26,19 +55,19 @@
 
 }
 
-.weekdays{
+.weekday{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(7,1fr);
+    justify-content:center;
 
-    text-align:center;
+    align-items:center;
+
+    font-size:16px;
 
     font-weight:bold;
 
-    margin-bottom:10px;
-
-    color:#220057;
+    color:var(--calendar-title);
 
 }
 
@@ -66,7 +95,7 @@
 
     min-height:34px;
 
-    font-size:20px;
+    font-size:15px;
 
     line-height:1;
 
