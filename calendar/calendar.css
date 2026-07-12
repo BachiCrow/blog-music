@@ -103,7 +103,23 @@
 
 }
 
+.cal-grid{
 
+    outline:2px solid blue;
+
+}
+
+.cal-day{
+
+    outline:1px solid red;
+
+    min-width:32px;
+
+    min-height:32px;
+
+    white-space:nowrap;
+
+}
 /*==================================================
 =            CELDAS DE LOS DÍAS
 ==================================================*/
