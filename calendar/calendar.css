@@ -13,6 +13,7 @@
 
 #calendar{
 
+    font-family:Arial, Helvetica, sans-serif;
     background:var(--calendar-bg);
     border:3px solid var(--calendar-border);
     box-shadow:0 6px 18px var(--calendar-shadow);
