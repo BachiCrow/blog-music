@@ -55,6 +55,18 @@ function renderCalendar(){
         /*==================================================
         =            GENERAR ENCABEZADO
         ==================================================*/
+function createHeader(){
+
+    const title = document.createElement("h2");
+
+    title.textContent = `${months[currentMonth]} ${currentYear}`;
+
+    title.className = "cal-title";
+
+    calendar.appendChild(title);
+
+}
+    
 function createWeekdays(){
 
     const week = document.createElement("div");
@@ -75,32 +87,12 @@ function createWeekdays(){
 
     calendar.appendChild(week);
 
-}
-    
-function createHeader(){
-
-    const title = document.createElement("h2");
-
-    title.textContent = `${months[currentMonth]} ${currentYear}`;
-
-    title.className = "cal-title";
-
-    calendar.appendChild(title);
-
-}
-        const title = document.createElement("h2");
-
-        title.textContent = `${months[currentMonth]} ${currentYear}`;
-
-        title.className = "cal-title";
-
-        calendar.appendChild(title);
 
 
         /*==================================================
         =            GENERAR DÍAS DE LA SEMANA
         ==================================================*/
-function createGrid(){
+    
         const week = document.createElement("div");
 
         week.className = "cal-weekdays";
@@ -118,12 +110,12 @@ function createGrid(){
         });
 
         calendar.appendChild(week);
-}
-
+      }
         /*==================================================
         =            GENERAR CUADRÍCULA
         ==================================================*/
-
+function createGrid(){
+    
         const grid = document.createElement("div");
 
         grid.className = "cal-grid";
@@ -175,36 +167,6 @@ function createGrid(){
         calendar.appendChild(grid);
 
     }
-
-/*==================================================
-=            NOMBRES DE MESES Y DÍAS
-==================================================*/
-
-
-
-/*==================================================
-=            FUNCIÓN PRINCIPAL
-==================================================*/
-
-
-
-/*==================================================
-=            GENERAR ENCABEZADO
-==================================================*/
-
-
-
-/*==================================================
-=            GENERAR DÍAS DE LA SEMANA
-==================================================*/
-
-
-
-/*==================================================
-=            GENERAR CUADRÍCULA
-==================================================*/
-
-
 
 /*==================================================
 =            EVENTOS
