@@ -1,7 +1,7 @@
 /*==================================================
 =            CALENDAR 1.0
 ==================================================*/
-function createGrid(){
+
     
 document.addEventListener("DOMContentLoaded", () => {
     /*==================================================
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /*==================================================
     =            NOMBRES DE MESES Y DÍAS
     ==================================================*/
-
+function createGrid(){
     const months = [
         "Enero","Febrero","Marzo","Abril",
         "Mayo","Junio","Julio","Agosto",
