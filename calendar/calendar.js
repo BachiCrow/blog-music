@@ -170,14 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*==================================================
 =            EVENTOS
 ==================================================*/
-function renderCalendar(){
-
-    calendar.innerHTML = "";
-
-    createHeader();
-
-    createWeekdays();
-
-    createGrid();
+    renderCalendar();
 
 });
