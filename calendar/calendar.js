@@ -2,8 +2,8 @@
 =            CALENDAR 1.0
 ==================================================*/
 
-    
 document.addEventListener("DOMContentLoaded", () => {
+    
     /*==================================================
     =            ELEMENTOS DEL DOM
     ==================================================*/
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     /*==================================================
     =            NOMBRES DE MESES Y DÍAS
     ==================================================*/
-function createGrid(){
     const months = [
         "Enero","Febrero","Marzo","Abril",
         "Mayo","Junio","Julio","Agosto",
@@ -171,7 +170,6 @@ function createWeekdays(){
         calendar.appendChild(grid);
 
     }
-}
 
 /*==================================================
 =            NOMBRES DE MESES Y DÍAS
