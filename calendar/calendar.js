@@ -29,7 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mayo","Junio","Julio","Agosto",
         "Septiembre","Octubre","Noviembre","Diciembre"
     ];
+    
+function createWeekdays(){
 
+    const week = document.createElement("div");
+
+    week.className = "cal-weekdays";
+
+    weekDays.forEach(day =>{
+
+        const cell = document.createElement("div");
+
+        cell.textContent = day;
+
+        cell.className = "cal-weekday";
+
+        week.appendChild(cell);
+
+    });
+    
     const weekDays = [
         "L","M","X","J","V","S","D"
     ];
@@ -63,39 +81,13 @@ function createHeader(){
     calendar.appendChild(title);
 
 }
-        const title = document.createElement("h2");
-
-        title.textContent = `${months[currentMonth]} ${currentYear}`;
-
-        title.className = "cal-title";
-
-        calendar.appendChild(title);
-
 
         /*==================================================
         =            GENERAR DÍAS DE LA SEMANA
         ==================================================*/
-function createWeekdays(){
-
-    const week = document.createElement("div");
-
-    week.className = "cal-weekdays";
-
-    weekDays.forEach(day =>{
-
-        const cell = document.createElement("div");
-
-        cell.textContent = day;
-
-        cell.className = "cal-weekday";
-
-        week.appendChild(cell);
-
-    });
-
+function createGrid(){
     calendar.appendChild(week);
 
-}
         const week = document.createElement("div");
 
         week.className = "cal-weekdays";
@@ -113,7 +105,7 @@ function createWeekdays(){
         });
 
         calendar.appendChild(week);
-
+}
 
         /*==================================================
         =            GENERAR CUADRÍCULA
@@ -204,6 +196,14 @@ function createWeekdays(){
 /*==================================================
 =            EVENTOS
 ==================================================*/
-    renderCalendar();
+function renderCalendar(){
+
+    calendar.innerHTML = "";
+
+    createHeader();
+
+    createWeekdays();
+
+    createGrid();
 
 });
