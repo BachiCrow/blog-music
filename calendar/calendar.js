@@ -40,15 +40,54 @@ document.addEventListener("DOMContentLoaded", () => {
     =            FUNCIÓN PRINCIPAL
     ==================================================*/
 
-    function renderCalendar(){
+function renderCalendar(){
 
-        calendar.innerHTML = "";
+    calendar.innerHTML = "";
 
+    createHeader();
+
+    createWeekdays();
+
+    createGrid();
+
+}
 
         /*==================================================
         =            GENERAR ENCABEZADO
         ==================================================*/
+function createWeekdays(){
 
+    const week = document.createElement("div");
+
+    week.className = "cal-weekdays";
+
+    weekDays.forEach(day =>{
+
+        const cell = document.createElement("div");
+
+        cell.textContent = day;
+
+        cell.className = "cal-weekday";
+
+        week.appendChild(cell);
+
+    });
+
+    calendar.appendChild(week);
+
+}
+    
+function createHeader(){
+
+    const title = document.createElement("h2");
+
+    title.textContent = `${months[currentMonth]} ${currentYear}`;
+
+    title.className = "cal-title";
+
+    calendar.appendChild(title);
+
+}
         const title = document.createElement("h2");
 
         title.textContent = `${months[currentMonth]} ${currentYear}`;
@@ -61,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         /*==================================================
         =            GENERAR DÍAS DE LA SEMANA
         ==================================================*/
-
+function createGrid(){
         const week = document.createElement("div");
 
         week.className = "cal-weekdays";
@@ -79,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         calendar.appendChild(week);
-
+}
 
         /*==================================================
         =            GENERAR CUADRÍCULA
