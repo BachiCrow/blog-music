@@ -3,7 +3,7 @@
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     /*==================================================
     =            ELEMENTOS DEL DOM
     ==================================================*/
@@ -24,69 +24,43 @@ document.addEventListener("DOMContentLoaded", () => {
     /*==================================================
     =            NOMBRES DE MESES Y DÍAS
     ==================================================*/
+
     const months = [
         "Enero","Febrero","Marzo","Abril",
         "Mayo","Junio","Julio","Agosto",
         "Septiembre","Octubre","Noviembre","Diciembre"
     ];
-    
-function createWeekdays(){
 
-    const week = document.createElement("div");
-
-    week.className = "cal-weekdays";
-
-    weekDays.forEach(day =>{
-
-        const cell = document.createElement("div");
-
-        cell.textContent = day;
-
-        cell.className = "cal-weekday";
-
-        week.appendChild(cell);
-
-    });
-    
     const weekDays = [
         "L","M","X","J","V","S","D"
     ];
+
 
     /*==================================================
     =            FUNCIÓN PRINCIPAL
     ==================================================*/
 
-function renderCalendar(){
+    function renderCalendar(){
 
-    calendar.innerHTML = "";
+        calendar.innerHTML = "";
 
-    createHeader();
 
-    createWeekdays();
-
-    createGrid();
-
-}
         /*==================================================
         =            GENERAR ENCABEZADO
         ==================================================*/
-function createHeader(){
 
-    const title = document.createElement("h2");
+        const title = document.createElement("h2");
 
-    title.textContent = `${months[currentMonth]} ${currentYear}`;
+        title.textContent = `${months[currentMonth]} ${currentYear}`;
 
-    title.className = "cal-title";
+        title.className = "cal-title";
 
-    calendar.appendChild(title);
+        calendar.appendChild(title);
 
-}
 
         /*==================================================
         =            GENERAR DÍAS DE LA SEMANA
         ==================================================*/
-function createGrid(){
-    calendar.appendChild(week);
 
         const week = document.createElement("div");
 
@@ -105,7 +79,7 @@ function createGrid(){
         });
 
         calendar.appendChild(week);
-}
+
 
         /*==================================================
         =            GENERAR CUADRÍCULA
