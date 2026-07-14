@@ -31,13 +31,28 @@
 
 }
 
+/*==================================================
+=            CONTENEDOR DEL ENCABEZADO
+==================================================*/
+
+.cal-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+}
 
 /*==================================================
 =            ENCABEZADO
 ==================================================*/
 .cal-title{
 
-    margin:0 0 14px;
+    margin:0;
 
     text-align:center;
 
