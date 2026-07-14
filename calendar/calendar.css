@@ -223,3 +223,25 @@
     box-shadow:0 3px 10px rgba(240,98,62,.35);
 
 }
+
+/*==================================================
+=            HOVER SOBRE LOS DÍAS
+==================================================*/
+
+.cal-day:hover{
+
+    background:#F9A336;
+
+    color:#FFFFFF;
+
+    transform:scale(1.08);
+
+}
+
+.cal-today:hover{
+
+    background:#F0623E;
+
+    color:#FFFFFF;
+
+}
