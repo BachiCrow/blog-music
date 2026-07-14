@@ -200,16 +200,16 @@
     user-select:none;
 
     transition:
-        background .2s ease,
-        color .2s ease,
-        transform .15s ease;
+        background .25s ease,
+        color .25s ease,
+        transform .15s ease,
+        box-shadow .25s ease;
 
 }
 
 /*==================================================
 =            DÍA ACTUAL
 ==================================================*/
-
 .cal-today{
 
     background:#F0623E;
@@ -219,5 +219,7 @@
     font-weight:700;
 
     border-radius:50%;
+
+    box-shadow:0 3px 10px rgba(240,98,62,.35);
 
 }
