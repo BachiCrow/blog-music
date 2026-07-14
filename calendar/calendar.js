@@ -70,6 +70,7 @@ function createHeader(){
 
     prevBtn.textContent = "◀";
 
+    prevBtn.addEventListener("click", previousMonth);
 
     const title = document.createElement("h2");
 
@@ -84,6 +85,7 @@ function createHeader(){
 
     nextBtn.textContent = "▶";
 
+    nextBtn.addEventListener("click", nextMonth);
 
     header.appendChild(prevBtn);
 
@@ -180,11 +182,44 @@ function createHeader(){
         calendar.appendChild(grid);
 
     }
+    
+/*==================================================
+=            NAVEGACIÓN ENTRE MESES
+==================================================*/
+function previousMonth(){
 
+    currentMonth--;
 
-    /*==================================================
-    =            EVENTOS
-    ==================================================*/
+    if(currentMonth < 0){
+
+        currentMonth = 11;
+        currentYear--;
+
+    }
+
+    renderCalendar();
+
+}
+    
+function nextMonth(){
+
+    currentMonth++;
+
+    if(currentMonth > 11){
+
+        currentMonth = 0;
+        currentYear++;
+
+    }
+
+    renderCalendar();
+
+}
+    
+    
+/*==================================================
+=            EVENTOS
+==================================================*/
 
     renderCalendar();
 
