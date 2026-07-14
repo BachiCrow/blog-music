@@ -34,19 +34,19 @@
 /*==================================================
 =            CONTENEDOR DEL ENCABEZADO
 ==================================================*/
-
 .cal-header{
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
 
     margin-bottom:14px;
 
 }
-
 /*==================================================
 =            BOTONES DE NAVEGACIÓN
 ==================================================*/
@@ -87,6 +87,8 @@
 .cal-title{
 
     margin:0;
+
+    flex:1;
 
     text-align:center;
 
