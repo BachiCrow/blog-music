@@ -57,17 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
     =            GENERAR ENCABEZADO
     ==================================================*/
 
-    function createHeader(){
+function createHeader(){
 
-        const title = document.createElement("h2");
+    const header = document.createElement("div");
 
-        title.className = "cal-title";
+    header.className = "cal-header";
 
-        title.textContent = `${months[currentMonth]} ${currentYear}`;
+    const title = document.createElement("h2");
 
-        calendar.appendChild(title);
+    title.className = "cal-title";
 
-    }
+    title.textContent = `${months[currentMonth]} ${currentYear}`;
+
+    header.appendChild(title);
+
+    calendar.appendChild(header);
+
+}
 
 
     /*==================================================
