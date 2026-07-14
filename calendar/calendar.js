@@ -63,13 +63,33 @@ function createHeader(){
 
     header.className = "cal-header";
 
+
+    const prevBtn = document.createElement("button");
+
+    prevBtn.className = "cal-nav-btn";
+
+    prevBtn.textContent = "◀";
+
+
     const title = document.createElement("h2");
 
     title.className = "cal-title";
 
     title.textContent = `${months[currentMonth]} ${currentYear}`;
 
+
+    const nextBtn = document.createElement("button");
+
+    nextBtn.className = "cal-nav-btn";
+
+    nextBtn.textContent = "▶";
+
+
+    header.appendChild(prevBtn);
+
     header.appendChild(title);
+
+    header.appendChild(nextBtn);
 
     calendar.appendChild(header);
 
