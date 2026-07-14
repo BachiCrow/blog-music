@@ -173,6 +173,8 @@
 ==================================================*/
 .cal-day{
 
+    cursor:pointer;
+
     display:flex;
 
     justify-content:center;
@@ -229,12 +231,14 @@
 ==================================================*/
 
 .cal-day:hover{
-
+    
     background:#F9A336;
 
     color:#FFFFFF;
 
     transform:scale(1.08);
+
+    box-shadow:0 4px 10px rgba(240,98,62,.30);
 
 }
 
