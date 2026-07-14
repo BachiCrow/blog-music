@@ -8,42 +8,66 @@ const playlist = [
     },
 
     {
-        title: "Run Rabbit",
-        artist: "Mollie Elizabeth",
-        audio:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mollie-elizabeth-run-rabbit.mp3",
-        cover:"https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-runrabbit.png"
+        title: "Browser History",
+        artist: "Graham Kartna",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/browser-history.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/browser-history.gif"
     },
 
     {
-        title: "Ballora's Music Box",
-        artist: "FNAF Sister Location",
-        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/fnafsl-ballora-music-box.mp3",
-        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-ballora.png"
+        title: "Frutiger Aero",
+        artist: "Lemons",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/lemons-frutiger-aero.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/lemons-frutiger-aero.gif"
+    },
+
+    {
+
+        title: "Lost in the lullaby",
+        artist: "Alyzea",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/lost-in-the-lullaby.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/acuario-roto.gif"
     },
 
     {
         title: "Mice Circus - Coraline",
         artist: "LAIKA Studios",
         audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/mice-circus.mp3",
-        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-mice-circus.png"
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/carrusel.gif"
     },
 
     {
-        title: "Steampianist Thing Feat",
-        artist: "flvtter - tema",
-        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/steampianist-thing-feat.mp3",
-        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-steampianist.png"
+        title: "Photo Channel",
+        artist: "SD card Photo List",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/photo-channel-sdcard-photolist.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/photo-channel.gif"
     },
 
     {
-        title: "3 Koopa Kingz",
-        artist: "aNTOJE",
-        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/antoje-3-koopa-kingz.mp3",
-        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/1-lucky.gif"
+
+        title: "Lotus Water",
+        artist: "Yumme2 Akki",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/yume2kki-lotus-waters.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/yume2kki-lotus-waters.gif"
+    },
+
+    {
+
+        title: "Soundtrack Menu Music",
+        artist: "Wii Party",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/wiiparty-soundtrack-menu-music.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/carpeta-arco.gif"
+    },
+
+    {
+
+        title: "Aquatic Ambience",
+        artist: "Scizzie",
+        audio: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/music/scizzie-aquatic-ambience.mp3",
+        cover: "https://raw.githubusercontent.com/BachiCrow/blog-music/main/covers/scizzie-aquatic-ambience.gif"
     }
 
 ];
-
 
 const audio = document.getElementById("audio");
 
