@@ -94,13 +94,17 @@
 
     font-family:"Segoe UI", Arial, sans-serif;
 
-    font-size:22px;
+    font-size:18px;
 
     font-weight:700;
 
     color:#F0623E;
 
-    letter-spacing:.5px;
+    letter-spacing:.3px;
+
+    line-height:1.2;
+
+    white-space:nowrap;
 
 }
 
