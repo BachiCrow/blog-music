@@ -171,16 +171,40 @@
     box-sizing:border-box;
 
     transition:
-        opacity .35s ease,
-        transform .35s cubic-bezier(.22,.61,.36,1);
+        transform .30s ease,
+        opacity .30s ease;
 
 }
 
-.cal-grid.changing{
+.cal-grid.slide-left{
 
-    opacity:.15;
+    transform:translateX(-40px);
 
-    transform:translateY(18px) scale(.98);
+    opacity:0;
+
+}
+
+.cal-grid.slide-right{
+
+    transform:translateX(40px);
+
+    opacity:0;
+
+}
+
+.cal-grid.from-left{
+
+    transform:translateX(-40px);
+
+    opacity:0;
+
+}
+
+.cal-grid.from-right{
+
+    transform:translateX(40px);
+
+    opacity:0;
 
 }
 
