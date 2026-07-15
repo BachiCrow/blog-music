@@ -20,7 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
 
+const importantDates = {
 
+    "2026-01-01":{
+        color:"#4CAF50",
+        title:"Año Nuevo"
+    },
+
+    "2026-02-14":{
+        color:"#F06292",
+        title:"San Valentín"
+    },
+
+    "2026-07-20":{
+        color:"#4FC3F7",
+        title:"Vacaciones"
+    },
+
+    "2026-12-25":{
+        color:"#E53935",
+        title:"Navidad"
+    }
+
+};
     /*==================================================
     =            NOMBRES DE MESES Y DÍAS
     ==================================================*/
@@ -42,6 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderCalendar(){
 
+const dateKey =
+`${currentYear}-${String(currentMonth+1).padStart(2,"0")}-${String(dayNumber).padStart(2,"0")}`;
+if(importantDates[dateKey]){
+    day.classList.add("important");
+}
+        
         calendar.innerHTML = "";
 
         createHeader();
