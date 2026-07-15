@@ -150,7 +150,7 @@ function createHeader(){
 
     function createGrid(){
 
-        const grid = document.createElement("div");
+        
 
 const day = document.createElement("div");
 const dateKey =
