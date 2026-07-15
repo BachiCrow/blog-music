@@ -240,7 +240,7 @@
 
     border-radius:50%;
 
-    background:#F0623E;
+    background:var(--event-color,#F0623E);
 
 }
 
