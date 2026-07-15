@@ -152,6 +152,7 @@ function createHeader(){
 
         const grid = document.createElement("div");
 
+const day = document.createElement("div");
 const dateKey =
 `${currentYear}-${String(currentMonth+1).padStart(2,"0")}-${String(dayNumber).padStart(2,"0")}`;
 
@@ -164,8 +165,8 @@ if(event){
     day.title = event.title;
 
     day.style.setProperty("--event-color", event.color);
-
 }
+        
         grid.className = "cal-grid";
 
         const firstDay = new Date(currentYear, currentMonth, 1);
