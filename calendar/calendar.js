@@ -207,7 +207,7 @@ function previousMonth(){
 
         grid.classList.remove("changing");
 
-    },250);
+    },350);
 
 }
     
