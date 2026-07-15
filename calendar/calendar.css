@@ -8,7 +8,6 @@
 
 }
 
-
 /*==================================================
 =            CONTENEDOR PRINCIPAL
 ==================================================*/
@@ -172,18 +171,19 @@
     box-sizing:border-box;
 
     transition:
-        opacity .25s ease,
-        transform .25s ease;
+        opacity .35s ease,
+        transform .35s cubic-bezier(.22,.61,.36,1);
 
 }
 
 .cal-grid.changing{
 
-    opacity:0;
+    opacity:.15;
 
-    transform:translateY(10px);
+    transform:translateY(18px) scale(.98);
 
 }
+
 .cal-day{
 
     min-height:32px;
