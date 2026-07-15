@@ -188,35 +188,53 @@ function createHeader(){
 ==================================================*/
 function previousMonth(){
 
-    currentMonth--;
+    const grid = document.querySelector(".calendar-grid");
 
-    if(currentMonth < 0){
+    grid.classList.add("changing");
 
-        currentMonth = 11;
-        currentYear--;
+    setTimeout(() => {
 
-    }
+        currentMonth--;
 
-    renderCalendar();
+        if(currentMonth < 0){
+
+            currentMonth = 11;
+            currentYear--;
+
+        }
+
+        renderCalendar();
+
+        grid.classList.remove("changing");
+
+    },250);
 
 }
     
 function nextMonth(){
 
-    currentMonth++;
+    const grid = document.querySelector(".calendar-grid");
 
-    if(currentMonth > 11){
+    grid.classList.add("changing");
 
-        currentMonth = 0;
-        currentYear++;
+    setTimeout(() => {
 
-    }
+        currentMonth++;
 
-    renderCalendar();
+        if(currentMonth > 11){
 
-}
+            currentMonth = 0;
+            currentYear++;
 
-    
+        }
+
+        renderCalendar();
+
+        grid.classList.remove("changing");
+
+    },250);
+
+}  
     
 /*==================================================
 =            EVENTOS
