@@ -146,6 +146,20 @@
 /*==================================================
 =            CUADRÍCULA DEL CALENDARIO
 ==================================================*/
+.cal-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,minmax(0,1fr));
+
+    gap:3px;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+}
+
 .calendar-grid{
 
     transition:
@@ -169,7 +183,6 @@
     white-space:nowrap;
 
 }
-
 
 /*==================================================
 =            CELDAS DEL CALENDARIO
