@@ -188,7 +188,7 @@ function createHeader(){
 ==================================================*/
 function previousMonth(){
 
-    const grid = document.querySelector(".calendar-grid");
+    const grid = document.querySelector(".cal-grid");
 
     grid.classList.add("changing");
 
