@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     /*==================================================
     =            GENERAR ENCABEZADO
     ==================================================*/
@@ -188,11 +187,7 @@ function createHeader(){
 ==================================================*/
 function previousMonth(){
 
-    const grid = document.querySelector(".cal-grid");
-
-    grid.classList.add("changing");
-
-    setTimeout(() => {
+    animateCalendar("previous", ()=>{
 
         currentMonth--;
 
@@ -205,19 +200,13 @@ function previousMonth(){
 
         renderCalendar();
 
-        grid.classList.remove("changing");
-
-    },350);
+    });
 
 }
     
 function nextMonth(){
 
-    const grid = document.querySelector(".cal-grid");
-
-    grid.classList.add("changing");
-
-    setTimeout(() => {
+    animateCalendar("next", ()=>{
 
         currentMonth++;
 
@@ -230,11 +219,48 @@ function nextMonth(){
 
         renderCalendar();
 
-        grid.classList.remove("changing");
+    });
 
-    },250);
+}
+    
+/*==================================================
+=            ANIMATION
+==================================================*/
+function animateCalendar(direction, callback){
 
-}  
+    const grid = document.querySelector(".cal-grid");
+
+    const exitClass = direction === "next"
+        ? "slide-left"
+        : "slide-right";
+
+    const enterClass = direction === "next"
+        ? "from-right"
+        : "from-left";
+
+    grid.classList.add(exitClass);
+
+    setTimeout(()=>{
+
+        callback();
+
+        grid.classList.remove(exitClass);
+
+        grid.classList.add(enterClass);
+
+        requestAnimationFrame(()=>{
+
+            requestAnimationFrame(()=>{
+
+                grid.classList.remove(enterClass);
+
+            });
+
+        });
+
+    },300);
+
+}
     
 /*==================================================
 =            EVENTOS
