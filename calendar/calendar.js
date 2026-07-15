@@ -186,33 +186,31 @@ function createHeader(){
 /*==================================================
 =            NAVEGACIÓN ENTRE MESES
 ==================================================*/
-function previousMonth(){
+function changeMonth(step){
 
-    currentMonth--;
+    const grid = document.querySelector(".calendar-grid");
 
-    if(currentMonth < 0){
+    grid.classList.add("changing");
 
-        currentMonth = 11;
-        currentYear--;
+    setTimeout(() => {
 
-    }
+        currentMonth += step;
 
-    renderCalendar();
+        if(currentMonth < 0){
+            currentMonth = 11;
+            currentYear--;
+        }
 
-}
-    
-function nextMonth(){
+        if(currentMonth > 11){
+            currentMonth = 0;
+            currentYear++;
+        }
 
-    currentMonth++;
+        renderCalendar();
 
-    if(currentMonth > 11){
+        grid.classList.remove("changing");
 
-        currentMonth = 0;
-        currentYear++;
-
-    }
-
-    renderCalendar();
+    },250);
 
 }
     
