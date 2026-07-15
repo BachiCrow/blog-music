@@ -258,7 +258,7 @@ function animateCalendar(direction, callback){
 
         });
 
-    },300);
+    },250);
 
 }
     
