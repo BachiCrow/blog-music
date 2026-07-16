@@ -222,11 +222,11 @@
 
     border:2px solid var(--event-color,#4A90E2);
 
-    border-radius:50%;
+    border-radius:30%;
 
-    width:36px;
+    width:30px;
 
-    height:36px;
+    height:30px;
 
     display:flex;
 
