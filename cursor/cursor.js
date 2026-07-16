@@ -9,11 +9,11 @@
 /*======================================
         PARTÍCULAS
 ======================================*/
-// Símbolos disponibles
+// Partículas disponibles
 const particles = [
-    "⚝",
-    "✧",
-    "☆"
+    "⭐",
+    "✨",
+    "🌟"
 ];
 
 // Configuración
