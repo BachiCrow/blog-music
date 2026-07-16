@@ -150,22 +150,7 @@ function createHeader(){
 
     function createGrid(){
 
-        
-
-const day = document.createElement("div");
-const dateKey =
-`${currentYear}-${String(currentMonth+1).padStart(2,"0")}-${String(dayNumber).padStart(2,"0")}`;
-
-const event = importantDates[dateKey];
-
-if(event){
-
-    day.classList.add("important");
-
-    day.title = event.title;
-
-    day.style.setProperty("--event-color", event.color);
-}
+        const grid = document.createElement("div");
         
         grid.className = "cal-grid";
 
@@ -189,34 +174,46 @@ if(event){
 
         }
 
-        for(let day = 1; day <= daysInMonth; day++){
+for(let day = 1; day <= daysInMonth; day++){
 
-            const cell = document.createElement("div");
+    const cell = document.createElement("div");
 
-            cell.className = "cal-day";
+    cell.className = "cal-day";
 
-            cell.textContent = day;
+    cell.textContent = day;
 
-            if(
+    // Crear la fecha completa
+    const dateKey =
+    `${currentYear}-${String(currentMonth + 1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
 
-                day === today.getDate() &&
-                currentMonth === today.getMonth() &&
-                currentYear === today.getFullYear()
+    const event = importantDates[dateKey];
 
-            ){
+    if(event){
 
-                cell.classList.add("cal-today");
+        cell.classList.add("important");
 
-            }
+        cell.title = event.title;
 
-            grid.appendChild(cell);
+        cell.style.setProperty("--event-color", event.color);
 
-        }
+    }
 
+    if(
+
+        day === today.getDate() &&
+        currentMonth === today.getMonth() &&
+        currentYear === today.getFullYear()
+
+    ){
+
+        cell.classList.add("cal-today");
+
+    }
+
+    grid.appendChild(cell);
+
+}
         calendar.appendChild(grid);
-
-
-
         
     }
     
