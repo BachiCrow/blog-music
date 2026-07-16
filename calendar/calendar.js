@@ -30,7 +30,7 @@ const importantDates = {
 
         color:"#F00E4C"
 
-    }
+    },
 
     "2026-02-20":{
 
