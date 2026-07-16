@@ -24,11 +24,19 @@ const importantDates = {
 
     },
 
-    "2026-07-20":{
+    "2026-10-18":{
 
-        title:"🎉 Vacaciones",
+        title:"💖​ Día de las madres",
 
-        color:"#42A5F5"
+        color:"#F00E4C"
+
+    }
+
+    "2026-10-18":{
+
+    title:"💖​ Día de las madres",
+
+    color:"#42A5F5"
 
     }
 
