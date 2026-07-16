@@ -1,1 +1,79 @@
+html,
+body,
+*{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/normal.cur"), auto !important;
+}
 
+a,
+a:hover{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
+}
+
+
+#play-song,
+#prev-song,
+#next-song,
+#shuffle-btn,
+#mute-btn{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
+}
+
+#calendar .cal-nav-btn{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
+}
+
+input,
+textarea{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/text.cur"), text;
+}
+
+button,
+.music-btn,
+.cal-btn,
+input[type="button"],
+input[type="submit"]{
+    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
+}
+
+/* ==========================
+   PARTÍCULAS - ESTRELLAS
+========================== */
+
+.click-star{
+
+    position:fixed;
+    width:10px;
+    height:10px;
+
+    pointer-events:none;
+    user-select:none;
+
+    z-index:999999;
+
+    font-size:14px;
+    line-height:1;
+
+    animation:starBurst .8s ease-out forwards;
+
+}
+
+@keyframes starBurst{
+
+    from{
+
+        opacity:1;
+        transform:translate(0,0) scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+        transform:
+            translate(var(--x),var(--y))
+            scale(.2)
+            rotate(180deg);
+
+    }
+
+}
