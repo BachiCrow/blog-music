@@ -8,19 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
 ==================================================*/
 const importantDates = {
 
-    "2026-01-01":{
-        title:"Año Nuevo",
-        color:"#4CAF50"
-    },
-
-    "2026-07-09":{
-        title:"Día de la Independencia",
-        color:"#42A5F5"
-    },
-
     "2026-12-25":{
-        title:"Navidad",
+
+        title:"🎄 Navidad",
+
         color:"#E53935"
+
+    },
+
+    "2026-10-31":{
+
+        title:"🎃 Halloween",
+
+        color:"#FF9800"
+
+    },
+
+    "2026-07-20":{
+
+        title:"🎉 Vacaciones",
+
+        color:"#42A5F5"
+
     }
 
 };
