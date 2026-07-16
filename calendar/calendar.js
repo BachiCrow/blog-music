@@ -46,8 +46,15 @@ const importantDates = {
 
     color:"#8A2E00"
 
-    }
+    },
+    
+    "2026-07-09":{
 
+    title:"Día de la independencia Argentina​​",
+
+    color:"#09D9D3"
+
+    }
 };
     
     /*==================================================
