@@ -12,7 +12,7 @@ const importantDates = {
 
         title:"🎄 Navidad",
 
-        color:"#E53935"
+        color:"#508A00"
 
     },
 
@@ -32,11 +32,11 @@ const importantDates = {
 
     }
 
-    "2026-10-18":{
+    "2026-02-20":{
 
-    title:"💖​ Día de las madres",
+    title:"😺​​ Día internacional del gato",
 
-    color:"#42A5F5"
+    color:"#F27407"
 
     }
 
