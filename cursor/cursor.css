@@ -1,1 +1,87 @@
+/*======================================
+    CURSOR PERSONALIZADO
+======================================*/
 
+/* Cursor normal */
+html,
+body,
+*{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/normal.cur"), auto;
+}
+
+/* Enlaces */
+a,
+a:hover{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
+}
+
+/* Botones */
+#play-song,
+#prev-song,
+#next-song,
+#shuffle-btn,
+#mute-btn,
+#calendar .cal-nav-btn{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
+}
+
+/* Campos de texto */
+input,
+textarea{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/text.cur"), text;
+}
+
+/* Elementos deshabilitados */
+:disabled{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/unavailable.cur"), not-allowed;
+}
+
+
+/*======================================
+      PARTÍCULAS
+======================================*/
+
+.click-star{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:999999;
+
+    font-size:15px;
+
+    animation:starBurst .8s ease-out forwards;
+
+}
+
+@keyframes starBurst{
+
+    from{
+
+        opacity:1;
+
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(.2)
+        rotate(180deg);
+
+    }
+
+}
