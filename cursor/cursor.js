@@ -9,6 +9,15 @@
 /*======================================
         PARTÍCULAS
 ======================================*/
+const size = 12 + Math.random() * 12;
+
+star.style.fontSize = size + "px";
+
+const particles = [
+    "✮",
+    "✩",
+    "✦"
+];
 
 document.addEventListener("pointerdown", createStarBurst);
 
@@ -22,7 +31,8 @@ function createStarBurst(event){
 
         star.className = "click-star";
 
-        star.textContent = "✩";
+        star.textContent =
+particles[Math.floor(Math.random() * particles.length)];
 
         star.style.left = event.clientX + "px";
         star.style.top = event.clientY + "px";
