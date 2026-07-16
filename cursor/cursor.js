@@ -22,7 +22,7 @@ function createStarBurst(event){
 
         star.className = "click-star";
 
-        star.textContent = "⭐";
+        star.textContent = "✩";
 
         star.style.left = event.clientX + "px";
         star.style.top = event.clientY + "px";
