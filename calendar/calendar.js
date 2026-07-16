@@ -54,6 +54,13 @@ const importantDates = {
 
         color:"#BA041F"
 
+    },
+    "2026-06-21":{
+
+        title:"Día del padre​​",
+
+        color:"#BA041F"
+
     }
 };
     
