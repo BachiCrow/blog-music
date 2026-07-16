@@ -1,57 +1,60 @@
+/*======================================
+    CURSOR PERSONALIZADO
+======================================*/
+
+/* Cursor normal */
 html,
 body,
 *{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/normal.cur"), auto !important;
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/normal.cur"), auto;
 }
 
+/* Enlaces */
 a,
 a:hover{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
 }
 
-
+/* Botones */
 #play-song,
 #prev-song,
 #next-song,
 #shuffle-btn,
-#mute-btn{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
-}
-
+#mute-btn,
 #calendar .cal-nav-btn{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer !important;
 }
 
+/* Campos de texto */
 input,
 textarea{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/text.cur"), text;
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/text.cur"), text;
 }
 
-button,
-.music-btn,
-.cal-btn,
-input[type="button"],
-input[type="submit"]{
-    cursor: url("https://bachicrow.github.io/blog-music/cursor/link.cur"), pointer;
+/* Elementos deshabilitados */
+:disabled{
+    cursor:url("https://bachicrow.github.io/blog-music/cursor/unavailable.cur"), not-allowed;
 }
 
-/* ==========================
-   PARTÍCULAS - ESTRELLAS
-========================== */
+
+/*======================================
+      PARTÍCULAS
+======================================*/
 
 .click-star{
 
     position:fixed;
-    width:10px;
-    height:10px;
+
+    left:0;
+    top:0;
 
     pointer-events:none;
+
     user-select:none;
 
     z-index:999999;
 
-    font-size:14px;
-    line-height:1;
+    font-size:15px;
 
     animation:starBurst .8s ease-out forwards;
 
@@ -62,17 +65,22 @@ input[type="submit"]{
     from{
 
         opacity:1;
-        transform:translate(0,0) scale(1);
+
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(0deg);
 
     }
 
     to{
 
         opacity:0;
+
         transform:
-            translate(var(--x),var(--y))
-            scale(.2)
-            rotate(180deg);
+        translate(var(--x),var(--y))
+        scale(.2)
+        rotate(180deg);
 
     }
 
