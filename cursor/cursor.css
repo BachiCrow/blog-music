@@ -10,14 +10,13 @@
     top:0;
 
     pointer-events:none;
-
     user-select:none;
 
     z-index:999999;
 
-    animation:starBurst .8s ease-out forwards;
+    line-height:1;
 
-    will-change:transform, opacity;
+    animation:starBurst .8s ease-out forwards;
 
 }
 
@@ -39,8 +38,8 @@
         opacity:0;
 
         transform:
-            translate(var(--x), var(--y))
-            scale(.2)
+            translate(var(--x),var(--y))
+            scale(.25)
             rotate(var(--rotation));
 
     }
