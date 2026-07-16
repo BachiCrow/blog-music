@@ -10,7 +10,7 @@ const importantDates = {
 
     "2026-12-25":{
 
-        title:"🎄 Navidad",
+        title:"Navidad 🎄",
 
         color:"#508A00"
 
@@ -18,7 +18,7 @@ const importantDates = {
 
     "2026-10-31":{
 
-        title:"🎃 Halloween",
+        title:"Halloween 🎃",
 
         color:"#FF9800"
 
@@ -26,7 +26,7 @@ const importantDates = {
 
     "2026-10-18":{
 
-        title:"💖​ Día de las madres",
+        title:"​Día de las madres 💖",
 
         color:"#F00E4C"
 
@@ -34,9 +34,17 @@ const importantDates = {
 
     "2026-02-20":{
 
-    title:"😺​​ Día internacional del gato",
+    title:"Día internacional del gato 😺​​",
 
     color:"#F27407"
+
+    },
+
+    "2026-07-21":{
+
+    title:"Día internacional del perro 🐶​​",
+
+    color:"#8A2E00"
 
     }
 
