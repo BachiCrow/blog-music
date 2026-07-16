@@ -45,3 +45,51 @@
     }
 
 }
+
+/*======================================
+      PARTÍCULAS
+======================================*/
+
+.click-star{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+    user-select:none;
+
+    z-index:999999;
+
+    line-height:1;
+
+    animation:starBurst .8s ease-out forwards;
+
+}
+
+@keyframes starBurst{
+
+    from{
+
+        opacity:1;
+
+        transform:
+            translate(0,0)
+            scale(1)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+            translate(var(--x),var(--y))
+            scale(.25)
+            rotate(var(--rotation));
+
+    }
+
+}
