@@ -12,7 +12,7 @@ const importantDates = {
 
         title:"Navidad 🎄",
 
-        color:"#508A00"
+        color:"#BA041F"
 
     },
 
@@ -20,7 +20,7 @@ const importantDates = {
 
         title:"Halloween 🎃",
 
-        color:"#FF9800"
+        color:"#BA041F"
 
     },
 
@@ -28,31 +28,31 @@ const importantDates = {
 
         title:"​Día de las madres 💖",
 
-        color:"#F00E4C"
+        color:"#BA041F"
 
     },
 
     "2026-02-20":{
 
-    title:"Día internacional del gato 😺​​",
+        title:"Día internacional del gato 😺​​",
 
-    color:"#F27407"
+        color:"#BA041F"
 
     },
 
     "2026-07-21":{
 
-    title:"Día internacional del perro 🐶​​",
+        title:"Día internacional del perro 🐶​​",
 
-    color:"#8A2E00"
+        color:"#BA041F"
 
     },
     
     "2026-07-09":{
 
-    title:"Día de la independencia Argentina​​",
+        title:"Día de la independencia Argentina​​",
 
-    color:"#09D9D3"
+        color:"#BA041F"
 
     }
 };
