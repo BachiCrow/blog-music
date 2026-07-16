@@ -40,7 +40,6 @@ textarea{
 /*======================================
       PARTÍCULAS
 ======================================*/
-
 .click-star{
 
     position:fixed;
@@ -49,11 +48,12 @@ textarea{
     top:0;
 
     pointer-events:none;
+
     user-select:none;
 
     z-index:999999;
 
-    line-height:1;
+    font-size:15px;
 
     animation:starBurst .8s ease-out forwards;
 
@@ -66,9 +66,9 @@ textarea{
         opacity:1;
 
         transform:
-            translate(0,0)
-            scale(1)
-            rotate(0deg);
+        translate(0,0)
+        scale(1)
+        rotate(0deg);
 
     }
 
@@ -77,9 +77,9 @@ textarea{
         opacity:0;
 
         transform:
-            translate(var(--x),var(--y))
-            scale(.25)
-            rotate(var(--rotation));
+        translate(var(--x),var(--y))
+        scale(.2)
+        rotate(180deg);
 
     }
 
