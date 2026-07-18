@@ -38,9 +38,7 @@ this.element.appendChild(this.glow);
 this.element.appendChild(this.core);
 
 this.container.appendChild(this.element);
-
-        this.container.appendChild(this.element);
-
+       
         // Posición inicial
         this.x = 100;
         this.y = 220;
