@@ -45,6 +45,10 @@ class Firefly {
         this.waiting = false;
         this.waitTime = 0;
 
+       // Animación del brillo
+        this.glowPhase = Math.random() * Math.PI * 2;
+        this.glowSpeed = 0.04 + Math.random() * 0.03;
+
         // Elegir el primer destino
         this.chooseTarget();
 
@@ -80,6 +84,16 @@ class Firefly {
 }
     }
 
+   blink() {
+
+    this.glowPhase += this.glowSpeed;
+
+    const glow = 0.75 + Math.sin(this.glowPhase) * 0.25;
+
+    this.element.style.opacity = glow;
+
+}
+   
 update() {
 
     if (this.waiting) {
@@ -98,6 +112,8 @@ update() {
         this.move();
 
     }
+
+    this.blink();
 
 }
 
