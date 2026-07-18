@@ -25,8 +25,19 @@ class Firefly {
         this.container = container;
 
         // Crear el elemento HTML
-        this.element = document.createElement("div");
-        this.element.className = "firefly";
+this.element = document.createElement("div");
+this.element.className = "firefly";
+
+this.glow = document.createElement("div");
+this.glow.className = "firefly-glow";
+
+this.core = document.createElement("div");
+this.core.className = "firefly-core";
+
+this.element.appendChild(this.glow);
+this.element.appendChild(this.core);
+
+this.container.appendChild(this.element);
 
         this.container.appendChild(this.element);
 
