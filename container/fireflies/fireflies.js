@@ -1,6 +1,7 @@
 /* =====================================================
    CONFIGURACIÓN
 ===================================================== */
+
 const SETTINGS = {
 
     fireflies: 1,
@@ -17,36 +18,22 @@ const SETTINGS = {
 
 const JAR = {
 
-    areas: [
+    flightArea: {
 
-        {
-            top: 18,
-            bottom: 35,
-            left: 38,
-            right: 62
-        },
+        left: 55,
+        right: 145,
+        top: 60,
+        bottom: 250
 
-        {
-            top: 35,
-            bottom: 70,
-            left: 28,
-            right: 72
-        },
-
-        {
-            top: 70,
-            bottom: 88,
-            left: 35,
-            right: 65
-        }
-
-    ]
+    }
 
 };
+
 
 /* =====================================================
    CLASE FIREFLY
 ===================================================== */
+
 class Firefly {
 
     constructor(container) {
@@ -92,27 +79,19 @@ class Firefly {
 
     }
 
-chooseTarget() {
+    chooseTarget() {
 
-    const width = this.container.clientWidth;
-
-    const height = this.container.clientHeight;
-
-    this.targetX =
-        width * (
+        this.targetX =
             JAR.flightArea.left +
             Math.random() *
-            (JAR.flightArea.right - JAR.flightArea.left)
-        ) / 100;
+            (JAR.flightArea.right - JAR.flightArea.left);
 
-    this.targetY =
-        height * (
+        this.targetY =
             JAR.flightArea.top +
             Math.random() *
-            (JAR.flightArea.bottom - JAR.flightArea.top)
-        ) / 100;
+            (JAR.flightArea.bottom - JAR.flightArea.top);
 
-}
+    }
 
     move() {
 
@@ -145,12 +124,10 @@ chooseTarget() {
 
         const glowSize = 10 + pulse * 12;
 
-        this.glow.style.setProperty("--glow-size", glowSize + "px");
-
-       this.element.style.transform =
+        this.element.style.transform =
             `translate(${this.x}px, ${this.y}px) scale(${scale})`;
 
-        this.glow.style.boxShadow=
+        this.element.style.boxShadow =
             `0 0 6px #FFD84D,
              0 0 ${glowSize}px #FFD84D,
              0 0 ${glowSize * 2}px rgba(255,216,77,.8)`;
@@ -182,9 +159,11 @@ chooseTarget() {
 
 }
 
+
 /* =====================================================
    ANIMACIÓN
 ===================================================== */
+
 function animate() {
 
     firefly.update();
@@ -193,9 +172,11 @@ function animate() {
 
 }
 
+
 /* =====================================================
    INICIALIZACIÓN
 ===================================================== */
+
 const jar = document.getElementById("jar-container");
 
 const firefly = new Firefly(jar);
