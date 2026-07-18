@@ -1,3 +1,7 @@
+.logo svg{
+    transform:translateX(-20px);
+}
+
 /* ---------- Widget ---------- */
 #firefly-widget{
     display:flex;
