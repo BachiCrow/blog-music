@@ -18,30 +18,14 @@ const SETTINGS = {
 
 const JAR = {
 
-    areas: [
+    flightArea:{
 
-        {
-            top: 18,
-            bottom: 35,
-            left: 38,
-            right: 62
-        },
+        left:28,
+        right:72,
+        top:18,
+        bottom:85
 
-        {
-            top: 35,
-            bottom: 70,
-            left: 28,
-            right: 72
-        },
-
-        {
-            top: 70,
-            bottom: 88,
-            left: 35,
-            right: 65
-        }
-
-    ]
+    }
 
 };
 
@@ -94,20 +78,27 @@ class Firefly {
 
     }
 
-    chooseTarget() {
+chooseTarget() {
 
-        this.targetX =
+    const width = this.container.clientWidth;
+
+    const height = this.container.clientHeight;
+
+    this.targetX =
+        width * (
             JAR.flightArea.left +
             Math.random() *
-            (JAR.flightArea.right - JAR.flightArea.left);
+            (JAR.flightArea.right - JAR.flightArea.left)
+        ) / 100;
 
-        this.targetY =
+    this.targetY =
+        height * (
             JAR.flightArea.top +
             Math.random() *
-            (JAR.flightArea.bottom - JAR.flightArea.top);
+            (JAR.flightArea.bottom - JAR.flightArea.top)
+        ) / 100;
 
-    }
-
+}
     move() {
 
         this.x += (this.targetX - this.x) * this.speed;
