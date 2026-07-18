@@ -38,20 +38,18 @@
     width:10px;
     height:10px;
 
-    background:#FFD84D;
-
     border-radius:50%;
+
+    background:#FFD84D;
 
     box-shadow:
         0 0 6px #FFD84D,
-        0 0 14px #FFD84D,
-        0 0 24px rgba(255,216,77,.8);
-
-    left:50%;
-    top:60%;
-
-    transform:translate(-50%,-50%);
+        0 0 12px #FFD84D,
+        0 0 22px rgba(255,216,77,.8);
 
     z-index:20;
+
+    left:0;
+    top:0;
 
 }
