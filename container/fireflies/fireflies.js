@@ -20,10 +20,10 @@ const JAR = {
 
     flightArea:{
 
-        left:28,
-        right:72,
-        top:18,
-        bottom:85
+        left:30,
+        right:70,
+        top:15,
+        bottom:82
 
     }
 
@@ -84,12 +84,30 @@ chooseTarget() {
 
     const height = this.container.clientHeight;
 
-    this.targetX =
-        width * (
-            JAR.flightArea.left +
-            Math.random() *
-            (JAR.flightArea.right - JAR.flightArea.left)
-        ) / 100;
+const width = this.container.clientWidth;
+const height = this.container.clientHeight;
+
+   this.targetX =
+    width *
+    (
+        JAR.flightArea.left +
+        Math.random() *
+        (
+            JAR.flightArea.right -
+            JAR.flightArea.left
+        )
+    ) / 100;
+
+this.targetY =
+    height *
+    (
+        JAR.flightArea.top +
+        Math.random() *
+        (
+            JAR.flightArea.bottom -
+            JAR.flightArea.top
+        )
+    ) / 100;
 
     this.targetY =
         height * (
@@ -178,13 +196,12 @@ function animate() {
 
 }
 
-
 /* =====================================================
    INICIALIZACIÓN
 ===================================================== */
 
-const jar = document.getElementById("jar-container");
+const layer = document.getElementById("fireflies-layer");
 
-const firefly = new Firefly(jar);
+const firefly = new Firefly(layer);
 
 animate();
