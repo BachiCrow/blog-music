@@ -123,6 +123,9 @@ class Firefly {
 
         this.glow.style.setProperty("--glow-size", glowSize + "px");
 
+       this.element.style.transform =
+            `translate(${this.x}px, ${this.y}px) scale(${scale})`;
+
         this.glow.style.boxShadow=
             `0 0 6px #FFD84D,
              0 0 ${glowSize}px #FFD84D,
