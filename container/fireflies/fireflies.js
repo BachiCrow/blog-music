@@ -18,17 +18,32 @@ const SETTINGS = {
 
 const JAR = {
 
-    flightArea: {
+    areas: [
 
-        left: 55,
-        right: 145,
-        top: 60,
-        bottom: 250
+        {
+            top: 18,
+            bottom: 35,
+            left: 38,
+            right: 62
+        },
 
-    }
+        {
+            top: 35,
+            bottom: 70,
+            left: 28,
+            right: 72
+        },
+
+        {
+            top: 70,
+            bottom: 88,
+            left: 35,
+            right: 65
+        }
+
+    ]
 
 };
-
 
 /* =====================================================
    CLASE FIREFLY
