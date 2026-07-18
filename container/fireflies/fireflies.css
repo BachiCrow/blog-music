@@ -46,16 +46,14 @@
 
     position:absolute;
 
+    left:0;
+    top:0;
+
     width:8px;
     height:8px;
 
-    border-radius:50%;
-
-    background:#FFD84D;
-
-    transform:translate(-50%,-50%);
-
-    z-index:2;
+    margin-left:-4px;
+    margin-top:-4px;
 
 }
 
@@ -63,20 +61,13 @@
 
     position:absolute;
 
+    left:0;
+    top:0;
+
     width:24px;
     height:24px;
 
-    border-radius:50%;
-
-    transform:translate(-50%,-50%);
-
-    background:radial-gradient(
-        circle,
-        rgba(255,216,77,.75) 0%,
-        rgba(255,216,77,.30) 45%,
-        rgba(255,216,77,0) 100%
-    );
-
-    z-index:1;
+    margin-left:-12px;
+    margin-top:-12px;
 
 }
