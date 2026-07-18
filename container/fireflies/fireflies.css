@@ -11,8 +11,8 @@
 #jar-container{
     position: relative;
     width: 200px;
-    margin: auto;
-margin-left:20px;
+    margin: 0 auto;
+    transform: translateX(20px);
 }
 
 /* ---------- Imagen del frasco ---------- */
