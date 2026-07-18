@@ -9,24 +9,18 @@
 
 /* ---------- Contenedor del frasco ---------- */
 #jar-container{
-
-    position:relative;
-
-    width:150px;
-
-    aspect-ratio:1/1;
-
-    margin:auto;
-
+    position: relative;
+    width: 160px;
+    margin: auto;
 }
 
 /* ---------- Imagen del frasco ---------- */
 #jar{
-    width:100%;
-    display:block;
-    user-select:none;
-    pointer-events:none;
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 /* ---------- Capa donde irán las luciérnagas ---------- */
 #fireflies-layer{
     position:absolute;
