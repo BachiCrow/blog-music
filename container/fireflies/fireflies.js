@@ -18,16 +18,70 @@ const SETTINGS = {
 
 const JAR = {
 
-    flightArea:{
+    flightAreas:[
 
-        left:30,
-        right:70,
-        top:15,
-        bottom:82
+        {
+
+            top:40,
+            bottom:80,
+
+            left:70,
+            right:100
+
+        },
+
+        {
+
+            top:80,
+            bottom:180,
+
+            left:50,
+            right:120
+
+        },
+
+        {
+
+            top:180,
+            bottom:250,
+
+            left:60,
+            right:110
+
+        }
+
+    ]
+
+};
+
+function isInsideJar(x, y){
+
+    // Cuello
+    if(y < 70){
+
+        return x > 70 && x < 100;
 
     }
 
-};
+    // Cuerpo
+    if(y < 220){
+
+        const center = 85;
+
+        const radius = 55;
+
+        return Math.abs(x - center) < radius;
+
+    }
+
+    // Base
+    const center = 85;
+
+    const radius = 40;
+
+    return Math.abs(x - center) < radius;
+
+}
 
 /* =====================================================
    CLASE FIREFLY
