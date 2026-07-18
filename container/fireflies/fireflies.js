@@ -88,9 +88,20 @@ class Firefly {
 
     this.glowPhase += this.glowSpeed;
 
-    const glow = 0.75 + Math.sin(this.glowPhase) * 0.25;
+    const pulse = (Math.sin(this.glowPhase) + 1) / 2;
 
-    this.element.style.opacity = glow;
+    const scale = 0.95 + pulse * 0.15;
+
+    const glowSize = 10 + pulse * 12;
+
+    this.element.style.transform =
+        `translate(${this.x}px, ${this.y}px) scale(${scale})`;
+
+    this.element.style.boxShadow = `
+        0 0 6px #FFD84D,
+        0 0 ${glowSize}px #FFD84D,
+        0 0 ${glowSize * 2}px rgba(255,216,77,.8)
+    `;
 
 }
    
