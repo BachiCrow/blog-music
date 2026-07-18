@@ -55,6 +55,14 @@
     margin-left:-4px;
     margin-top:-4px;
 
+    border-radius:50%;
+
+    background:#FFD84D;
+
+    box-shadow:0 0 4px #FFD84D;
+
+    z-index:2;
+
 }
 
 .firefly-glow{
@@ -64,10 +72,21 @@
     left:0;
     top:0;
 
-    width:24px;
-    height:24px;
+    width:28px;
+    height:28px;
 
-    margin-left:-12px;
-    margin-top:-12px;
+    margin-left:-14px;
+    margin-top:-14px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,216,77,.85) 0%,
+        rgba(255,216,77,.35) 45%,
+        rgba(255,216,77,0) 100%
+    );
+
+    z-index:1;
 
 }
