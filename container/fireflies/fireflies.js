@@ -28,7 +28,6 @@ const JAR = {
 
 };
 
-
 /* =====================================================
    CLASE FIREFLY
 ===================================================== */
@@ -122,10 +121,9 @@ class Firefly {
 
         const glowSize = 10 + pulse * 12;
 
-        this.element.style.transform =
-            `translate(${this.x}px, ${this.y}px) scale(${scale})`;
+        this.glow.style.setProperty("--glow-size", glowSize + "px");
 
-        this.element.style.boxShadow =
+        this.glow.style.boxShadow=
             `0 0 6px #FFD84D,
              0 0 ${glowSize}px #FFD84D,
              0 0 ${glowSize * 2}px rgba(255,216,77,.8)`;
