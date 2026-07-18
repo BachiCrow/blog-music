@@ -35,22 +35,48 @@
 
     position:absolute;
 
-    width:10px;
-    height:10px;
+    width:0;
+    height:0;
+
+    pointer-events:none;
+
+}
+
+.firefly-core{
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
 
     border-radius:50%;
 
     background:#FFD84D;
 
-    box-shadow:
-        0 0 6px #FFD84D,
-        0 0 12px #FFD84D,
-        0 0 22px rgba(255,216,77,.8);
+    transform:translate(-50%,-50%);
 
-    z-index:20;
-
-    left:0;
-    top:0;
+    z-index:2;
 
 }
 
+.firefly-glow{
+
+    position:absolute;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:radial-gradient(
+        circle,
+        rgba(255,216,77,.75) 0%,
+        rgba(255,216,77,.30) 45%,
+        rgba(255,216,77,0) 100%
+    );
+
+    z-index:1;
+
+}
