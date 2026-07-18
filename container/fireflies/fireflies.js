@@ -63,12 +63,19 @@ this.container.appendChild(this.element);
 
     }
 
-    chooseTarget() {
+chooseTarget() {
 
-        this.targetX = 55 + Math.random() * 90;
-        this.targetY = 60 + Math.random() * 190;
+    this.targetX =
+        JAR_BOUNDS.left +
+        Math.random() *
+        (JAR_BOUNDS.right - JAR_BOUNDS.left);
 
-    }
+    this.targetY =
+        JAR_BOUNDS.top +
+        Math.random() *
+        (JAR_BOUNDS.bottom - JAR_BOUNDS.top);
+
+}
 
     move() {
 
