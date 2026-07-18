@@ -40,6 +40,8 @@
 
     pointer-events:none;
 
+    z-index:50;
+
 }
 
 .firefly-core{
