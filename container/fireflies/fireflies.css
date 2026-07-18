@@ -10,8 +10,9 @@
 /* ---------- Contenedor del frasco ---------- */
 #jar-container{
     position:relative;
-    width:240px;
+    width:150px;
     aspect-ratio:1/1;
+    margin:auto;
 }
 
 /* ---------- Imagen del frasco ---------- */
