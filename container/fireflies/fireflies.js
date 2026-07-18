@@ -41,6 +41,10 @@ class Firefly {
         // Velocidad
         this.speed = 0.02;
 
+       // Estado
+        this.waiting = false;
+        this.waitTime = 0;
+
         // Elegir el primer destino
         this.chooseTarget();
 
@@ -68,13 +72,28 @@ class Firefly {
 
         if (distance < 3) {
 
+            this.waiting = true;
+
+    // Espera entre 0.5 y 2 segundos
+    this.waitTime = 30 + Math.random() * 90;
+
+}
+    }
+
+update() {
+
+    if (this.waiting) {
+
+        this.waitTime--;
+
+        if (this.waitTime <= 0) {
+
+            this.waiting = false;
             this.chooseTarget();
 
         }
 
-    }
-
-    update() {
+    } else {
 
         this.move();
 
@@ -82,6 +101,7 @@ class Firefly {
 
 }
 
+}
 /* =====================================================
    GESTOR DEL FRASCO
 ===================================================== */
