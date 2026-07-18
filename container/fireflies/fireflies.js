@@ -92,19 +92,27 @@ class Firefly {
 
     }
 
-    chooseTarget() {
+chooseTarget() {
 
-        this.targetX =
+    const width = this.container.clientWidth;
+
+    const height = this.container.clientHeight;
+
+    this.targetX =
+        width * (
             JAR.flightArea.left +
             Math.random() *
-            (JAR.flightArea.right - JAR.flightArea.left);
+            (JAR.flightArea.right - JAR.flightArea.left)
+        ) / 100;
 
-        this.targetY =
+    this.targetY =
+        height * (
             JAR.flightArea.top +
             Math.random() *
-            (JAR.flightArea.bottom - JAR.flightArea.top);
+            (JAR.flightArea.bottom - JAR.flightArea.top)
+        ) / 100;
 
-    }
+}
 
     move() {
 
