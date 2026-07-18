@@ -1,2 +1,31 @@
+/* ---------- Widget ---------- */
+#firefly-widget{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:15px 0;
+}
 
+/* ---------- Contenedor del frasco ---------- */
+#jar-container{
+    position: relative;
+    width: 200px;
+    margin: auto;
+    margin-left:-15px;
+}
 
+/* ---------- Imagen del frasco ---------- */
+#jar{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Capa donde irán las luciérnagas ---------- */
+#fireflies-layer{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
