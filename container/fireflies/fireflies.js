@@ -18,8 +18,7 @@ if (jar) {
         x += (Math.random() - 0.5) * 3;
         y += (Math.random() - 0.5) * 3;
 
-        firefly.style.left = x + "px";
-        firefly.style.top = y + "px";
+firefly.style.transform = `translate(${x}px, ${y}px)`;
 
         console.log(x, y);
 
