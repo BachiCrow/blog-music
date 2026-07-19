@@ -157,6 +157,10 @@ chooseTarget() {
 
         const distance = Math.hypot(
 
+        console.log(
+            "x:", this.x.toFixed(1),
+            "y:", this.y.toFixed(1)
+);
             this.targetX - this.x,
             this.targetY - this.y
 
