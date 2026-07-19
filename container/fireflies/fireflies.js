@@ -155,12 +155,12 @@ chooseTarget() {
         this.x += (this.targetX - this.x) * this.speed;
         this.y += (this.targetY - this.y) * this.speed;
 
-        const distance = Math.hypot(
-
-        console.log(
+console.log(
             "x:", this.x.toFixed(1),
             "y:", this.y.toFixed(1)
 );
+       
+        const distance = Math.hypot(
             this.targetX - this.x,
             this.targetY - this.y
 
