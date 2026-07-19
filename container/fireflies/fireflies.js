@@ -134,41 +134,18 @@ class Firefly {
 
 chooseTarget() {
 
-    const width = this.container.clientWidth;
+    let x;
+    let y;
 
-    const height = this.container.clientHeight;
+    do{
 
-const width = this.container.clientWidth;
-const height = this.container.clientHeight;
+        x = Math.random() * 170;
+        y = Math.random() * 286;
 
-   this.targetX =
-    width *
-    (
-        JAR.flightArea.left +
-        Math.random() *
-        (
-            JAR.flightArea.right -
-            JAR.flightArea.left
-        )
-    ) / 100;
+    }while(!isInsideJar(x, y));
 
-this.targetY =
-    height *
-    (
-        JAR.flightArea.top +
-        Math.random() *
-        (
-            JAR.flightArea.bottom -
-            JAR.flightArea.top
-        )
-    ) / 100;
-
-    this.targetY =
-        height * (
-            JAR.flightArea.top +
-            Math.random() *
-            (JAR.flightArea.bottom - JAR.flightArea.top)
-        ) / 100;
+    this.targetX = x;
+    this.targetY = y;
 
 }
     move() {
