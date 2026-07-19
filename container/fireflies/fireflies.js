@@ -56,29 +56,29 @@ const JAR = {
 
 function isInsideJar(x, y){
 
-    // No permitir entrar en la tapa
-    if(y < 48){
+    // Zona de la tapa (prohibida)
+    if(y < 60){
         return false;
     }
 
-    // Cuello
-    if(y < 78){
-        return x > 67 && x < 103;
+    // Cuello del frasco
+    if(y < 88){
+        return x > 68 && x < 102;
     }
 
-    // Parte superior del cuerpo
-    if(y < 120){
-        return x > 48 && x < 122;
+    // Hombros del frasco
+    if(y < 125){
+        return x > 52 && x < 118;
     }
 
-    // Cuerpo central
+    // Cuerpo principal
     if(y < 225){
-        return x > 35 && x < 135;
+        return x > 38 && x < 132;
     }
 
     // Base redondeada
     if(y < 270){
-        return x > 42 && x < 128;
+        return x > 46 && x < 124;
     }
 
     return false;
