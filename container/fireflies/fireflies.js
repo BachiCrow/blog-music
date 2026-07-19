@@ -56,30 +56,32 @@ const JAR = {
 
 function isInsideJar(x, y){
 
+    // No permitir entrar en la tapa
+    if(y < 48){
+        return false;
+    }
+
     // Cuello
-    if(y < 70){
-
-        return x > 70 && x < 100;
-
+    if(y < 78){
+        return x > 67 && x < 103;
     }
 
-    // Cuerpo
-    if(y < 220){
-
-        const center = 85;
-
-        const radius = 55;
-
-        return Math.abs(x - center) < radius;
-
+    // Parte superior del cuerpo
+    if(y < 120){
+        return x > 48 && x < 122;
     }
 
-    // Base
-    const center = 85;
+    // Cuerpo central
+    if(y < 225){
+        return x > 35 && x < 135;
+    }
 
-    const radius = 40;
+    // Base redondeada
+    if(y < 270){
+        return x > 42 && x < 128;
+    }
 
-    return Math.abs(x - center) < radius;
+    return false;
 
 }
 
