@@ -49,21 +49,21 @@ function createEmoji(){
     emoji.style.fontSize =
         random(SETTINGS.minSize,SETTINGS.maxSize) + "px";
 
-    emoji.style.animationDuration =
-        random(SETTINGS.minDuration,SETTINGS.maxDuration) + "s";
+const finalOpacity = Math.min(
+    SETTINGS.opacityMax,
+    Math.max(
+        SETTINGS.opacityMin,
+        random(SETTINGS.opacityMin, SETTINGS.opacityMax) + opacityBoost
+    )
+);
 
-    emoji.style.animationDelay =
-        random(0,SETTINGS.delayMax) + "s";
+emoji.style.animationDuration =
+    random(SETTINGS.minDuration, SETTINGS.maxDuration) + durationBoost + "s";
 
-    emoji.style.setProperty(
-        "--emoji-opacity",
-        random(SETTINGS.opacityMin,SETTINGS.opacityMax)
-    );
-
-    emoji.style.setProperty(
-        "--drift",
-        random(SETTINGS.driftMin,SETTINGS.driftMax) + "px"
-    );
+emoji.style.setProperty("--emoji-opacity", finalOpacity);
+emoji.style.setProperty("--emoji-blur", blur + "px");
+emoji.style.setProperty("--emoji-scale", scale);
+emoji.style.setProperty("--emoji-glow", glow);
 
     emoji.addEventListener("animationend",()=>{
         emoji.remove();
