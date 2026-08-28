@@ -1,1 +1,52 @@
+/* =====================================================
+   EMOJI RAIN 1.0
+   Capa para la lluvia de emojis.
+===================================================== */
 
+#emoji-rain-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.emoji-drop {
+    position: absolute;
+    top: -60px;
+    user-select: none;
+    will-change: transform;
+
+    opacity: 0.45;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,.15));
+
+    animation-name: emojiFall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes emojiFall {
+
+    0% {
+        transform: translate3d(0,-60px,0) rotate(0deg);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: var(--emoji-opacity);
+    }
+
+    50% {
+        transform:
+            translate3d(var(--drift),50vh,0)
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translate3d(calc(var(--drift) * 2),110vh,0)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
