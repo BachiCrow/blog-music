@@ -1,7 +1,7 @@
 const SETTINGS = {
 
     // Emojis que van a caer.
-    emojis:["🌙","🍃​","⭐​","☁️​​"],
+    emojis:["🌙","🍃​","⭐​","🍉​​​"],
 
     amount:18,
 
