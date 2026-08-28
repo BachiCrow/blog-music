@@ -11,20 +11,34 @@
     z-index: 999;
 }
 
+/* =====================================================
+   EMOJI RAIN 1.1
+   Ahora los emojis tienen profundidad.
+===================================================== */
+
 .emoji-drop {
     position: absolute;
     top: -60px;
-    user-select: none;
-    will-change: transform;
 
-    opacity: 0.45;
-    filter: drop-shadow(0 0 4px rgba(255,255,255,.15));
+    user-select: none;
+    pointer-events: none;
+    will-change: transform, filter, opacity;
+
+    opacity: var(--emoji-opacity);
+
+    /* Cada emoji tendrá un desenfoque distinto */
+    filter:
+        blur(var(--emoji-blur))
+        drop-shadow(0 0 calc(var(--emoji-glow) * 1px)
+        rgba(255,255,255,.18));
+
+    /* Tamaño según la profundidad */
+    transform: scale(var(--emoji-scale));
 
     animation-name: emojiFall;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
-
 @keyframes emojiFall {
 
     0% {
