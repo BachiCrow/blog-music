@@ -73,6 +73,47 @@ function createEmoji(){
     container.appendChild(emoji);
 }
 
+/* =============================================
+   PROFUNDIDAD DEL EMOJI
+============================================= */
+
+const depth = Math.random();
+
+let blur;
+let scale;
+let glow;
+let opacityBoost;
+let durationBoost;
+
+if(depth < 0.33){
+
+    // Fondo
+    blur = random(1.5,2.8);
+    scale = random(0.65,0.85);
+    glow = 1;
+    opacityBoost = -0.15;
+    durationBoost = 3;
+
+}else if(depth < 0.66){
+
+    // Capa media
+    blur = random(0.6,1.2);
+    scale = random(0.85,1.05);
+    glow = 2;
+    opacityBoost = 0;
+    durationBoost = 1;
+
+}else{
+
+    // Primer plano
+    blur = 0;
+    scale = random(1.05,1.35);
+    glow = 5;
+    opacityBoost = 0.12;
+    durationBoost = -1;
+
+}
+
 /* =====================================================
    CREAR LLUVIA
 ===================================================== */
