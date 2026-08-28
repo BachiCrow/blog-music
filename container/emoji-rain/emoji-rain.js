@@ -65,6 +65,15 @@ emoji.style.setProperty("--emoji-blur", blur + "px");
 emoji.style.setProperty("--emoji-scale", scale);
 emoji.style.setProperty("--emoji-glow", glow);
 
+    emoji.style.animationDelay =
+        random(0,SETTINGS.delayMax) + "s";
+
+    emoji.style.setProperty(
+        "--drift",
+        random(SETTINGS.driftMin,SETTINGS.driftMax) + "px"
+    );
+
+
     emoji.addEventListener("animationend",()=>{
         emoji.remove();
         createEmoji();
