@@ -1,1 +1,165 @@
+/* ==========================================================
+   GADGET LUNAR 1.0
+========================================================== */
 
+.moon-widget{
+
+    width:100%;
+    max-width:340px;
+    margin:18px auto;
+
+    padding:18px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(180deg,#18122B,#24183E);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 25px rgba(120,82,255,.18),
+        inset 0 0 15px rgba(255,255,255,.03);
+
+    color:#F3ECFF;
+
+    overflow:hidden;
+    position:relative;
+}
+
+/* Brillo decorativo */
+.moon-widget::before{
+
+    content:"";
+
+    position:absolute;
+    inset:-80px;
+
+    background:
+        radial-gradient(circle,
+        rgba(170,140,255,.08),
+        transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/* ---------------- Header ---------------- */
+
+.moon-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.moon-title{
+
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.4px;
+
+}
+
+.moon-badge{
+
+    background:#5B3EC8;
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+}
+
+/* ---------------- Cuerpo ---------------- */
+
+.moon-body{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    gap:12px;
+
+}
+
+/* Luna */
+
+#moon-image{
+
+    width:150px;
+    height:150px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,255,255,.12))
+        drop-shadow(0 0 22px rgba(255,230,180,.22));
+
+    animation:moonFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes moonFloat{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+
+/* ---------------- Información ---------------- */
+
+#moon-phase{
+
+    margin:0;
+
+    font-size:24px;
+    font-weight:700;
+
+    color:#FFF4C8;
+
+}
+
+#moon-date{
+
+    margin:0;
+
+    color:#CEC4F7;
+
+    font-size:14px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width:480px){
+
+    .moon-widget{
+        max-width:100%;
+        padding:16px;
+    }
+
+    #moon-image{
+        width:130px;
+        height:130px;
+    }
+
+    #moon-phase{
+        font-size:22px;
+    }
+
+}
