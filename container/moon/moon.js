@@ -11,7 +11,7 @@ const KNOWN_NEW_MOON = new Date("2023-01-21T20:53:00Z");
 
 /* URL BASE DE TUS SVG EN GITHUB */
 const SVG_PATH =
-"https://TU-USUARIO.github.io/container/moon/assets/";
+"https://bachicrow.github.io/blog-music/container/moon/assets/";
 
 /* =====================================================
    FASES LUNARES
