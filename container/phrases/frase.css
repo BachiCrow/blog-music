@@ -177,21 +177,29 @@
    CONTENIDO
 ===================================================== */
 
-.xp-content {
+.xp-content{
 
-    min-height: 130px;
+    min-height:120px;
 
-    padding: 20px;
+    padding:18px 14px;
 
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 
-    align-items: center;
-    justify-content: center;
+    background:#ffffff;
 
-    text-align: center;
+}
 
-    background: #ffffff;
+.quote{
+
+    width:100%;
+    max-width:240px;
+
+    font-size:15px;
+    line-height:1.5;
 
 }
 
