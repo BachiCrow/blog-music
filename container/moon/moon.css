@@ -56,10 +56,9 @@
     justify-content:space-between;
     align-items:center;
 
-    margin-bottom:18px;
+    gap:12px;
 
 }
-
 .moon-title{
 
     font-size:16px;
@@ -70,14 +69,24 @@
 
 .moon-badge{
 
-    background:#E6AC39;
+    background:#5B3EC8;
     color:white;
 
-    padding:5px 10px;
+    padding:6px 14px;
 
-    border-radius:30px;
+    border-radius:999px;
 
     font-size:12px;
+    font-weight:600;
+    line-height:1;
+
+    white-space:nowrap;
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:48px;
 
 }
 
@@ -90,7 +99,7 @@
     align-items:center;
     text-align:center;
 
-    gap:12px;
+    gap:6px;
 
 }
 
