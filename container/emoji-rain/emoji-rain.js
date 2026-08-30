@@ -3,7 +3,7 @@ const SETTINGS = {
     // Emojis que van a caer.
     emojis:["🌙","🍃​","⭐​","🍉​​​"],
 
-    amount:18,
+    amount:50,
 
     minSize:18,
     maxSize:34,
