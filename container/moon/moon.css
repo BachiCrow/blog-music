@@ -61,7 +61,7 @@
 }
 .moon-title{
 
-    font-size:16px;
+    font-size:10px;
     font-weight:600;
     letter-spacing:.4px;
 
@@ -69,7 +69,7 @@
 
 .moon-badge{
 
-    background:#C25913;
+    background:#4A164F;
     color:white;
 
     padding:6px 14px;
@@ -144,7 +144,7 @@
     font-size:24px;
     font-weight:700;
 
-    color:#822405;
+    color:#FE7210;
 
 }
 
