@@ -16,7 +16,7 @@
     border-radius:15px;
 
     background:
-        linear-gradient(180deg,#C9251C,#FF879A);
+        linear-gradient(180deg,#1D1D59,#FF879A);
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -69,7 +69,7 @@
 
 .moon-badge{
 
-    background:#A12B16;
+    background:#C25913;
     color:white;
 
     padding:6px 14px;
@@ -144,7 +144,7 @@
     font-size:24px;
     font-weight:700;
 
-    color:#FFBF8C;
+    color:#822405;
 
 }
 
