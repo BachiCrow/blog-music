@@ -2,29 +2,29 @@
    VENTANA WINDOWS XP
 ===================================================== */
 
-.xp-window {
+.xp-window{
 
-    width: 250px;
-    margin: 20px auto;
+    width:100%;
+    max-width:100%;
 
-    background: #ece9d8;
+    margin:0 auto;
 
-    border: 1px solid #003399;
-    border-radius: 8px 8px 0 0;
+    box-sizing:border-box;
+
+    background:#ece9d8;
+
+    border:1px solid #003399;
+    border-radius:8px 8px 0 0;
 
     box-shadow:
-        2px 2px 6px rgba(0,0,0,0.35),
-        inset 1px 1px rgba(255,255,255,0.8);
+        2px 2px 6px rgba(0,0,0,.35),
+        inset 1px 1px rgba(255,255,255,.8);
 
-    overflow: hidden;
+    overflow:hidden;
 
-    font-family:
-        Tahoma,
-        Arial,
-        sans-serif;
+    font-family:Tahoma, Arial, sans-serif;
 
 }
-
 
 /* =====================================================
    BARRA DE TÍTULO
