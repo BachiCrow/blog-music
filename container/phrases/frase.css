@@ -177,21 +177,15 @@
    CONTENIDO
 ===================================================== */
 
-.xp-content{
+.<div class="xp-content">
 
-    min-height:120px;
+    <div id="dailyQuote" class="quote">
+        Cargando frase...
+    </div>
 
-    padding:18px 14px;
+    <div id="dailyAuthor" class="quote-author"></div>
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    background:#ffffff;
-
-}
+</div>
 
 .quote{
 
