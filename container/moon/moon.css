@@ -9,14 +9,14 @@
 
     margin:18px auto;
 
-    padding:18px;
+    padding:16px;
 
     box-sizing:border-box;
 
     border-radius:24px;
 
     background:
-        linear-gradient(180deg,#18122B,#24183E);
+        linear-gradient(180deg,#C9251C,#C94B1C);
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -70,7 +70,7 @@
 
 .moon-badge{
 
-    background:#5B3EC8;
+    background:#E6AC39;
     color:white;
 
     padding:5px 10px;
@@ -132,7 +132,7 @@
     font-size:24px;
     font-weight:700;
 
-    color:#FFF4C8;
+    color:#540D00;
 
 }
 
@@ -140,7 +140,7 @@
 
     margin:0;
 
-    color:#CEC4F7;
+    color:#F7E4C4;
 
     font-size:14px;
 
