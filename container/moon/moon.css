@@ -113,7 +113,7 @@
     object-fit:contain;
     display:block;
 
-    margin:6px auto;
+    margin:2px auto;
 
     filter:
         drop-shadow(0 0 10px rgba(255,255,255,.12))
