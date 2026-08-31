@@ -4,7 +4,11 @@
 
 /* Contenido de la ventana */
 .xp-content{
-    padding: 20px 18px;
+    .xp-content{
+    background: #ffffff;
+    border: 1px inset #ffffff;
+   
+   padding: 20px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
