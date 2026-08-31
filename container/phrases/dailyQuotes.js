@@ -1,15 +1,6 @@
 /* =====================================================
    FRASES DEL DÍA
 ===================================================== */
-const quoteText = document.getElementById("quote-text");
-const quoteAuthor = document.getElementById("quote-author");
-
-if (!quoteText || !quoteAuthor) {
-    console.error("No se encontraron #quote-text o #quote-author.");
-} else {
-    showQuote();
-}
-
 const quotes = [
 
     {
@@ -46,9 +37,9 @@ const SETTINGS = {
    ELEMENTOS DEL GADGET
 ===================================================== */
 
-const quoteText = document.getElementById("quote-text");
-const quoteAuthor = document.getElementById("quote-author");
-
+const quoteText = document.getElementById("dailyQuote");
+const quoteAuthor = document.getElementById("dailyAuthor");
+const quoteDay = document.getElementById("quoteDay");
 
 /* =====================================================
    SELECCIONAR FRASE
@@ -134,6 +125,22 @@ async function showQuote() {
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    if (!quoteText || !quoteAuthor) {
+        console.error("No se encontraron los elementos del gadget.");
+        return;
+    }
+
+    // Mostrar la fecha en la barra inferior.
+    if (quoteDay) {
+        const today = new Date();
+
+        quoteDay.textContent = today.toLocaleDateString("es-AR", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+    }
 
     showQuote();
 
