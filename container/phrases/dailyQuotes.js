@@ -1,72 +1,142 @@
-
-const QUOTES = [
-    {
-        text:"Cada día es una nueva oportunidad para comenzar algo maravilloso.",
-        author:"Anónimo"
-    },
-    {
-        text:"Las estrellas también necesitan la noche para poder brillar.",
-        author:"Anónimo"
-    },
-    {
-        text:"Las pequeñas cosas también construyen grandes sueños.",
-        author:"Anónimo"
-    },
-    {
-        text:"Haz espacio para la magia de los días tranquilos.",
-        author:"Anónimo"
-    },
-    {
-        text:"Todo gran proyecto comienza con un pequeño paso.",
-        author:"Anónimo"
-    },
-    {
-        text:"Descansar también es parte de avanzar.",
-        author:"Anónimo"
-    },
-    {
-        text:"Confía en el proceso, incluso cuando vaya lento.",
-        author:"Anónimo"
-    },
-    {
-        text:"Nunca dejes de sentir curiosidad por el mundo.",
-        author:"Anónimo"
-    },
-    {
-        text:"Los sueños crecen cuando los cuidas un poquito cada día.",
-        author:"Anónimo"
-    },
-    {
-        text:"Siempre hay una pequeña luz esperando ser encontrada.",
-        author:"Anónimo"
-    }
-];
-
 /* =====================================================
-   FRASE DEL DÍA
+   FRASES DEL DÍA
 ===================================================== */
 
-function showDailyQuote(){
+const quotes = [
 
-    const today = new Date();
+    {
+        text: "Frase aquí",
+        author: "Autor aquí"
+    },
 
-    // Día del año (0 - 365)
-    const start = new Date(today.getFullYear(),0,0);
+    {
+        text: "Frase aquí",
+        author: "Autor aquí"
+    },
 
-    const diff = today - start;
+    {
+        text: "Frase aquí",
+        author: "Autor aquí"
+    },
 
-    const dayOfYear = Math.floor(diff / 86400000);
+    {
+        text: "Frase aquí",
+        author: "Autor aquí"
+    },
 
-    // Elegir frase según el día
-    const quote = QUOTES[dayOfYear % QUOTES.length];
+    {
+        text: "Frase aquí",
+        author: "Autor aquí"
+    }
 
-    document.getElementById("dailyQuote").textContent =
-        `"${quote.text}"`;
+];
 
-    document.getElementById("dailyAuthor").textContent =
-        `— ${quote.author}`;
+
+/* =====================================================
+   CONFIGURACIÓN
+===================================================== */
+
+const SETTINGS = {
+
+    typingSpeed: 45,
+    authorDelay: 500
+
+};
+
+
+/* =====================================================
+   ELEMENTOS DEL GADGET
+===================================================== */
+
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
+
+
+/* =====================================================
+   SELECCIONAR FRASE
+===================================================== */
+
+function getRandomQuote() {
+
+    const randomIndex =
+        Math.floor(Math.random() * quotes.length);
+
+    return quotes[randomIndex];
 
 }
 
-showDailyQuote();
 
+/* =====================================================
+   ANIMACIÓN DE ESCRITURA
+===================================================== */
+
+function typeText(text, element, speed) {
+
+    return new Promise(resolve => {
+
+        let index = 0;
+
+        element.textContent = "";
+
+        function type() {
+
+            if (index < text.length) {
+
+                element.textContent += text.charAt(index);
+
+                index++;
+
+                setTimeout(type, speed);
+
+            } else {
+
+                resolve();
+
+            }
+
+        }
+
+        type();
+
+    });
+
+}
+
+
+/* =====================================================
+   MOSTRAR FRASE
+===================================================== */
+
+async function showQuote() {
+
+    const quote = getRandomQuote();
+
+    quoteText.textContent = "";
+    quoteAuthor.textContent = "";
+
+    await typeText(
+        quote.text,
+        quoteText,
+        SETTINGS.typingSpeed
+    );
+
+
+    setTimeout(() => {
+
+        quoteAuthor.textContent =
+            "— " + quote.author;
+
+    }, SETTINGS.authorDelay);
+
+}
+
+
+/* =====================================================
+   INICIAR
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    showQuote();
+
+});
