@@ -1,6 +1,7 @@
 /* =====================================================
    FRASES DEL DÍA
 ===================================================== */
+console.log("dailyQuotes.js cargado correctamente");
 
 const quotes = [
 
