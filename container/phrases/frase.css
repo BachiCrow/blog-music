@@ -183,15 +183,16 @@
    BOTÓN CERRAR
 ===================================================== */
 
-.xp-button.close {
+.xp-close{
+    background: #e81123;
+    color: white;
 
-    background:
-        linear-gradient(
-            to bottom,
-            #ff8b78,
-            #d93820
-        );
+    border: 1px solid #8b0000;
 
+    font-weight: bold;
+    text-align: center;
+
+    text-shadow: 1px 1px 0 rgba(0,0,0,.35);
 }
 
 
