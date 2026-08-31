@@ -5,13 +5,18 @@
 const quotes = [
 
     {
-        text: "Cree que puedes y ya habrás recorrido la mitad del camino.",
-        author: "Theodore Roosevelt"
+        text: "La imaginación es más importante que el conocimiento.",
+        author: "Albert Einstein"
     },
 
     {
-        text: "Sé tú mismo. Todos los demás ya están ocupados.",
-        author: "Oscar Wilde"
+        text: "La vida es aquello que te sucede mientras estás ocupado haciendo otros planes.",
+        author: "John Lennon"
+    },
+
+    {
+        text: "No hay camino para la paz, la paz es el camino.",
+        author: "Mahatma Gandhi"
     }
 
 ];
