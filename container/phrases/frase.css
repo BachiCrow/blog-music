@@ -7,7 +7,7 @@
     background: #ffffff;
     border: 1px inset #ffffff;
 
-    padding: 22px 20px;      /* Espacio interno */
+    padding: 20px 18px;      /* Espacio interno */
 
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     align-items: center;      /* Centra horizontalmente */
 
     text-align: center;       /* Centra el texto */
-    min-height: 170px;
+    min-height: 140px;
     box-sizing: border-box;
 }
 
