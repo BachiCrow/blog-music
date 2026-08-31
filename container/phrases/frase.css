@@ -2,28 +2,54 @@
    VENTANA WINDOWS XP
 ===================================================== */
 
-.xp-window{
+/* Área donde aparece la frase */
+.xp-content{
+    background: #ffffff;
+    border: 1px inset #ffffff;
 
-    width:100%;
-    max-width:100%;
+    padding: 22px 20px;      /* Espacio interno */
 
-    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      /* Centra horizontalmente */
 
-    box-sizing:border-box;
+    text-align: center;       /* Centra el texto */
+    min-height: 170px;
+    box-sizing: border-box;
+}
 
-    background:#ece9d8;
+/* Frase */
+.quote{
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    line-height: 1.5;
 
-    border:1px solid #003399;
-    border-radius:8px 8px 0 0;
+    width: 100%;
+    max-width: 280px;         /* Evita líneas demasiado largas */
 
-    box-shadow:
-        2px 2px 6px rgba(0,0,0,.35),
-        inset 1px 1px rgba(255,255,255,.8);
+    min-height: 90px;
 
-    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-family:Tahoma, Arial, sans-serif;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #1b1b1b;
+}
 
+/* Autor */
+.quote-author{
+    width: 100%;
+    max-width: 260px;
+
+    margin-top: 18px;
+
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
 }
 
 /* =====================================================
@@ -55,6 +81,20 @@
     box-shadow:
         inset 0 1px rgba(255,255,255,0.45);
 
+}
+
+.xp-status{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:6px 10px;
+
+    background:#ece9d8;
+    border-top:1px solid #aca899;
+
+    font-size:12px;
+    color:#555;
 }
 
 
@@ -202,31 +242,50 @@
    FRASE
 ===================================================== */
 
-.quote {
-
-    max-width: 260px;
-
-    color: #222;
-
-    font-size: 15px;
+/* Texto de la frase */
+.quote{
+    font-family: "VT323", monospace;
+    font-size: 22px;
     line-height: 1.5;
-
+    min-height: 90px;
+    white-space: pre-wrap;
+    color: #1b1b1b;
+    position: relative;
 }
 
+/* Cursor */
+.quote::after{
+    content: "▌";
+    margin-left: 2px;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+}
 
 /* =====================================================
    AUTOR
 ===================================================== */
 
-.quote-author {
-
-    margin-top: 12px;
-
-    color: #666;
-
-    font-size: 12px;
+.quote-author{
+    margin-top: 16px;
+    text-align: right;
     font-style: italic;
-
+    font-size: 14px;
+    color: #4b5563;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: authorFade .6s ease forwards;
+    animation-delay: 3s;
 }
-```
+
+@keyframes authorFade{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
