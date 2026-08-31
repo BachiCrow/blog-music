@@ -5,28 +5,13 @@
 const quotes = [
 
     {
-        text: "Frase aquí",
-        author: "Autor aquí"
+        text: "Cree que puedes y ya habrás recorrido la mitad del camino.",
+        author: "Theodore Roosevelt"
     },
 
     {
-        text: "Frase aquí",
-        author: "Autor aquí"
-    },
-
-    {
-        text: "Frase aquí",
-        author: "Autor aquí"
-    },
-
-    {
-        text: "Frase aquí",
-        author: "Autor aquí"
-    },
-
-    {
-        text: "Frase aquí",
-        author: "Autor aquí"
+        text: "Sé tú mismo. Todos los demás ya están ocupados.",
+        author: "Oscar Wilde"
     }
 
 ];
