@@ -1,7 +1,14 @@
 /* =====================================================
    FRASES DEL DÍA
 ===================================================== */
-console.log("dailyQuotes.js cargado correctamente");
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
+
+if (!quoteText || !quoteAuthor) {
+    console.error("No se encontraron #quote-text o #quote-author.");
+} else {
+    showQuote();
+}
 
 const quotes = [
 
