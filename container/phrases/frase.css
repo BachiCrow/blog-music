@@ -2,19 +2,20 @@
    VENTANA WINDOWS XP
 ===================================================== */
 
-/* Contenido de la ventana */
+/* Área donde aparece la frase */
 .xp-content{
-    .xp-content{
     background: #ffffff;
     border: 1px inset #ffffff;
-   
-   padding: 20px 18px;
+
+    padding: 22px 20px;      /* Espacio interno */
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    min-height: 140px;
+    align-items: center;      /* Centra horizontalmente */
+
+    text-align: center;       /* Centra el texto */
+    min-height: 170px;
     box-sizing: border-box;
 }
 
