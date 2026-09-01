@@ -22,7 +22,7 @@
 /* Frase */
 .quote{
     font-family: "VT323", monospace;
-    font-size: 13px;      /* Antes estaba en 24px */
+    font-size: 8px;      /* Antes estaba en 24px */
     line-height: 1.45;
 
     width: 100%;
@@ -41,7 +41,7 @@
     max-width: 250px;
 
     text-align: center;
-    font-size: 7px;      /* Antes 14px */
+    font-size: 3px;      /* Antes 14px */
     font-style: italic;
     color: #555;
 }
