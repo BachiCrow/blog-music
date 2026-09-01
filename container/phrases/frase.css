@@ -7,7 +7,7 @@
     background: #ffffff;
     border: 1px inset #ffffff;
 
-    padding: 20px 18px;      /* Espacio interno */
+    padding: 15px 10px;      /* Espacio interno */
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 /* Frase */
 .quote{
     font-family: "VT323", monospace;
-    font-size: 8px;      /* Antes estaba en 24px */
+    font-size: 5px;      /* Antes estaba en 24px */
     line-height: 1.45;
 
     width: 100%;
