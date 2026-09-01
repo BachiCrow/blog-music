@@ -4,17 +4,17 @@
 const quotes = [
 
     {
-        text: "La imaginación es más importante que el conocimiento.",
+        text: "La imaginación es más importante que el conocimiento",
         author: "Albert Einstein"
     },
 
     {
-        text: "La vida es aquello que te sucede mientras estás ocupado haciendo otros planes.",
+        text: "La vida es aquello que te sucede mientras estás ocupado haciendo otros planes",
         author: "John Lennon"
     },
 
     {
-        text: "No hay camino para la paz, la paz es el camino.",
+        text: "No hay camino para la paz, la paz es el camino",
         author: "Mahatma Gandhi"
     }
 
