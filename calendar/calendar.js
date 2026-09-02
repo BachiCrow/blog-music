@@ -1,345 +1,102 @@
-/*==================================================
-=            CALENDAR 1.0
-==================================================*/
-document.addEventListener("DOMContentLoaded", () => {
+/* ==============================================
+   CALENDARIO XP v2.0 - ETAPA 2
+============================================== */
 
-/*==================================================
-=            FECHAS IMPORTANTES
-==================================================*/
-const importantDates = {
+const XP_MONTHS=[
+  "Enero","Febrero","Marzo","Abril","Mayo","Junio",
+  "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+];
 
-    "2026-12-25":{
+const XP_WEEKDAYS=["L","M","X","J","V","S","D"];
 
-        title:"Navidad 🎄",
+const today=new Date();
+let currentMonth=today.getMonth();
+let currentYear=today.getFullYear();
 
-        color:"#BA041F"
+const monthLabel=document.getElementById("xpMonthYear");
+const grid=document.getElementById("xpCalendarGrid");
+const prevBtn=document.getElementById("xpPrevMonth");
+const nextBtn=document.getElementById("xpNextMonth");
 
-    },
+function renderCalendar(month,year){
 
-    "2026-10-31":{
+  grid.innerHTML="";
 
-        title:"Halloween 🎃",
+  monthLabel.textContent=`${XP_MONTHS[month]} ${year}`;
 
-        color:"#BA041F"
+  XP_WEEKDAYS.forEach(day=>{
 
-    },
+    const weekday=document.createElement("div");
+    weekday.className="xp-cal-weekday";
+    weekday.textContent=day;
 
-    "2026-10-18":{
+    grid.appendChild(weekday);
 
-        title:"​Día de las madres 💖",
+  });
 
-        color:"#BA041F"
+  const firstDay=(new Date(year,month,1).getDay()+6)%7;
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const daysPrevMonth=new Date(year,month,0).getDate();
 
-    },
+  for(let i=firstDay-1;i>=0;i--){
 
-    "2026-02-20":{
+    const day=document.createElement("div");
+    day.className="xp-cal-day other-month";
+    day.textContent=daysPrevMonth-i;
 
-        title:"Día internacional del gato 😺​​",
+    grid.appendChild(day);
 
-        color:"#BA041F"
+  }
 
-    },
+  for(let dayNum=1;dayNum<=daysInMonth;dayNum++){
 
-    "2026-07-21":{
+    const day=document.createElement("div");
+    day.className="xp-cal-day";
+    day.textContent=dayNum;
 
-        title:"Día internacional del perro 🐶​​",
+    grid.appendChild(day);
 
-        color:"#BA041F"
+  }
 
-    },
-    
-    "2026-07-09":{
+  const totalCells=grid.children.length;
+  const remaining=42-(totalCells-7);
 
-        title:"Día de la independencia Argentina​​",
+  for(let i=1;i<=remaining;i++){
 
-        color:"#BA041F"
+    const day=document.createElement("div");
+    day.className="xp-cal-day other-month";
+    day.textContent=i;
 
-    },
-    "2026-06-21":{
+    grid.appendChild(day);
 
-        title:"Día del padre​​",
-
-        color:"#BA041F"
-
-    }
-};
-    
-    /*==================================================
-    =            ELEMENTOS DEL DOM
-    ==================================================*/
-
-    const calendar = document.getElementById("calendar");
-
-
-    /*==================================================
-    =            VARIABLES DEL CALENDARIO
-    ==================================================*/
-
-    const today = new Date();
-
-    let currentMonth = today.getMonth();
-    let currentYear = today.getFullYear();
-
-    /*==================================================
-    =            NOMBRES DE MESES Y DÍAS
-    ==================================================*/
-
-    const months = [
-        "Enero","Febrero","Marzo","Abril",
-        "Mayo","Junio","Julio","Agosto",
-        "Septiembre","Octubre","Noviembre","Diciembre"
-    ];
-
-    const weekDays = [
-        "L","M","X","J","V","S","D"
-    ];
-
-
-    /*==================================================
-    =            FUNCIÓN PRINCIPAL
-    ==================================================*/
-
-    function renderCalendar(){
-        
-        calendar.innerHTML = "";
-
-        createHeader();
-
-        createWeekdays();
-
-        createGrid();
-
-    }
-
-    /*==================================================
-    =            GENERAR ENCABEZADO
-    ==================================================*/
-
-function createHeader(){
-
-    const header = document.createElement("div");
-
-    header.className = "cal-header";
-
-
-    const prevBtn = document.createElement("button");
-
-    prevBtn.className = "cal-nav-btn";
-
-    prevBtn.textContent = "◀";
-
-    prevBtn.addEventListener("click", previousMonth);
-
-    const title = document.createElement("h2");
-
-    title.className = "cal-title";
-
-    title.textContent = `${months[currentMonth]} ${currentYear}`;
-
-
-    const nextBtn = document.createElement("button");
-
-    nextBtn.className = "cal-nav-btn";
-
-    nextBtn.textContent = "▶";
-
-    nextBtn.addEventListener("click", nextMonth);
-
-    header.appendChild(prevBtn);
-
-    header.appendChild(title);
-
-    header.appendChild(nextBtn);
-
-    calendar.appendChild(header);
+  }
 
 }
 
+prevBtn.addEventListener("click",()=>{
 
-    /*==================================================
-    =            GENERAR DÍAS DE LA SEMANA
-    ==================================================*/
+  currentMonth--;
 
-    function createWeekdays(){
+  if(currentMonth<0){
+    currentMonth=11;
+    currentYear--;
+  }
 
-        const week = document.createElement("div");
-
-        week.className = "cal-weekdays";
-
-        weekDays.forEach(day =>{
-
-            const cell = document.createElement("div");
-
-            cell.className = "cal-weekday";
-
-            cell.textContent = day;
-
-            week.appendChild(cell);
-
-        });
-
-        calendar.appendChild(week);
-
-    }
-
-
-    /*==================================================
-    =            GENERAR CUADRÍCULA
-    ==================================================*/
-
-    function createGrid(){
-
-        const grid = document.createElement("div");
-        
-        grid.className = "cal-grid";
-
-        const firstDay = new Date(currentYear, currentMonth, 1);
-
-        let start = firstDay.getDay();
-
-        start = (start + 6) % 7;
-
-        const daysInMonth = new Date(
-            currentYear,
-            currentMonth + 1,
-            0
-        ).getDate();
-
-        for(let i = 0; i < start; i++){
-
-            const empty = document.createElement("div");
-
-            grid.appendChild(empty);
-
-        }
-
-for(let day = 1; day <= daysInMonth; day++){
-
-    const cell = document.createElement("div");
-
-    cell.className = "cal-day";
-
-    cell.textContent = day;
-
-    // Crear la fecha completa
-    const dateKey =
-    `${currentYear}-${String(currentMonth + 1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
-
-    const event = importantDates[dateKey];
-
-    if(event){
-
-        cell.classList.add("important");
-
-        cell.title = event.title;
-
-        cell.style.setProperty("--event-color", event.color);
-
-    }
-
-    if(
-
-        day === today.getDate() &&
-        currentMonth === today.getMonth() &&
-        currentYear === today.getFullYear()
-
-    ){
-
-        cell.classList.add("cal-today");
-
-    }
-
-    grid.appendChild(cell);
-
-}
-        calendar.appendChild(grid);
-        
-    }
-    
-/*==================================================
-=            NAVEGACIÓN ENTRE MESES
-==================================================*/
-function previousMonth(){
-
-    animateCalendar("previous", ()=>{
-
-        currentMonth--;
-
-        if(currentMonth < 0){
-
-            currentMonth = 11;
-            currentYear--;
-
-        }
-
-        renderCalendar();
-
-    });
-
-}
-    
-function nextMonth(){
-
-    animateCalendar("next", ()=>{
-
-        currentMonth++;
-
-        if(currentMonth > 11){
-
-            currentMonth = 0;
-            currentYear++;
-
-        }
-
-        renderCalendar();
-
-    });
-
-}
-    
-/*==================================================
-=            ANIMATION
-==================================================*/
-function animateCalendar(direction, callback){
-
-    const grid = document.querySelector(".cal-grid");
-
-    const exitClass = direction === "next"
-        ? "slide-left"
-        : "slide-right";
-
-    const enterClass = direction === "next"
-        ? "from-right"
-        : "from-left";
-
-    grid.classList.add(exitClass);
-
-    setTimeout(()=>{
-
-        callback();
-
-        grid.classList.remove(exitClass);
-
-        grid.classList.add(enterClass);
-
-        requestAnimationFrame(()=>{
-
-            requestAnimationFrame(()=>{
-
-                grid.classList.remove(enterClass);
-
-            });
-
-        });
-
-    },250);
-
-}
-    
-/*==================================================
-=            EVENTOS
-==================================================*/
-
-    renderCalendar();
+  renderCalendar(currentMonth,currentYear);
 
 });
+
+nextBtn.addEventListener("click",()=>{
+
+  currentMonth++;
+
+  if(currentMonth>11){
+    currentMonth=0;
+    currentYear++;
+  }
+
+  renderCalendar(currentMonth,currentYear);
+
+});
+
+renderCalendar(currentMonth,currentYear);
