@@ -1,4 +1,4 @@
-const SETTINGS = {
+const EMOJI_SETTINGS = {
 
     // Emojis que van a caer.
     emojis:["🌙","🍃​","⭐​","🍉​​​"],
