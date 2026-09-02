@@ -197,22 +197,33 @@
 /*==================================================
 =            DÍAS DE LA SEMANA
 ==================================================*/
+
 .weekdays{
 
-  background:#F7F6F2;
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
 
-  border-top:1px solid #C5C5C5;
-  border-bottom:1px solid #C5C5C5;
+    grid-column:1 / -1;
 
+    background:#F7F6F2;
+
+    border-top:1px solid #C5C5C5;
+    border-bottom:1px solid #C5C5C5;
+
+    padding:4px 0;
 }
 
 .weekdays div{
 
-  color:#214D96;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  font-weight:bold;
+    color:#214D96;
 
-  font-family:Tahoma,sans-serif;
+    font-family:Tahoma,sans-serif;
+    font-size:13px;
+    font-weight:bold;
 
 }
 
@@ -308,5 +319,18 @@
   font-size:12px;
 
   color:#333;
+
+}
+
+/* Contenedor donde el JS coloca todos los días */
+
+.calendar-grid,
+.days{
+
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+
+    grid-column:1 / -1;
 
 }
