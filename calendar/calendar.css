@@ -13,6 +13,46 @@
 }
 
 /*==================================================
+=            CUADRÍCULA DEL CALENDARIO
+==================================================*/
+/* CONTENEDOR DEL CALENDARIO */
+#calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+    padding:0 12px 12px;
+}
+
+/* DÍAS DE LA SEMANA */
+.weekday{
+    text-align:center;
+    font-family:Tahoma,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    color:#214D96;
+    padding:6px 0;
+}
+
+/* CADA DÍA */
+.day{
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:Tahoma,sans-serif;
+    font-size:15px;
+
+    color:#222;
+    background:#FDFDFB;
+
+    border:1px solid transparent;
+    box-sizing:border-box;
+}
+
+/*==================================================
 =            CONTENEDOR PRINCIPAL
 ==================================================*/
 #calendar-window{
@@ -171,10 +211,6 @@
   font-family:Tahoma,sans-serif;
 
 }
-
-/*==================================================
-=            CUADRÍCULA DEL CALENDARIO
-==================================================*/
 
 /*==================================================
 =           ANIMACIÓN CAMBIO DE MES
