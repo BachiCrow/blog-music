@@ -33,7 +33,7 @@ const quotes = [
    CONFIGURACIÓN
 ===================================================== */
 
-const SETTINGS = {
+const QUOTES_SETTINGS = {
 
     typingSpeed: 45,
     authorDelay: 500
