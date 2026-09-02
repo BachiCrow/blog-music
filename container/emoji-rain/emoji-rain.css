@@ -3,12 +3,12 @@
    Capa para la lluvia de emojis.
 ===================================================== */
 
-#emoji-rain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;
+#emoji-rain-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
 }
 
 /* =====================================================
