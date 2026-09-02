@@ -59,7 +59,7 @@
 
 }
 /*==================================================
-=            BOTONES DE NAVEGACIÓN
+=            BOTONES DECORATIVOS
 ==================================================*/
 .xp-buttons{
   display:flex;
@@ -96,6 +96,37 @@
 }
 
 /*==================================================
+=            BOTONES DE NAVEGACIÓN
+==================================================*/
+.calendar-header button{
+
+  width:34px;
+  height:28px;
+
+  background:linear-gradient(#FCFCFC,#D8D8D8);
+
+  border-top:2px solid white;
+  border-left:2px solid white;
+  border-right:2px solid #808080;
+  border-bottom:2px solid #808080;
+
+  color:#35538A;
+
+}
+.calendar-header button:hover{
+
+  background:linear-gradient(#FFFFFF,#ECECEC);
+
+}
+.calendar-header button:active{
+
+  border-top:2px solid #808080;
+  border-left:2px solid #808080;
+  border-right:2px solid white;
+  border-bottom:2px solid white;
+
+}
+/*==================================================
 =            ENCABEZADO
 ==================================================*/
 .calendar-header{
@@ -119,37 +150,6 @@
   text-transform:uppercase;
 
 }
-
-.calendar-header button{
-
-  width:34px;
-  height:28px;
-
-  background:linear-gradient(#FCFCFC,#D8D8D8);
-
-  border-top:2px solid white;
-  border-left:2px solid white;
-  border-right:2px solid #808080;
-  border-bottom:2px solid #808080;
-
-  color:#35538A;
-
-}
-.calendar-header button:hover{
-
-  background:linear-gradient(#FFFFFF,#ECECEC);
-
-}
-
-.calendar-header button:active{
-
-  border-top:2px solid #808080;
-  border-left:2px solid #808080;
-  border-right:2px solid white;
-  border-bottom:2px solid white;
-
-}
-
 /*==================================================
 =            DÍAS DE LA SEMANA
 ==================================================*/
@@ -171,110 +171,10 @@
   font-family:Tahoma,sans-serif;
 
 }
-
 /*==================================================
 =            CUADRÍCULA DEL CALENDARIO
 ==================================================*/
-.cal-grid{
 
-    display:grid;
-
-    grid-template-columns:repeat(7,minmax(0,1fr));
-
-    gap:3px;
-
-    width:100%;
-
-    box-sizing:border-box;
-
-}
-
-.cal-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(7,minmax(0,1fr));
-
-    gap:3px;
-
-    width:100%;
-
-    box-sizing:border-box;
-
-    transition:
-        transform .30s ease,
-        opacity .30s ease;
-
-}
-
-.cal-grid.slide-left{
-
-    transform:translateX(-40px);
-
-    opacity:0;
-
-}
-
-.cal-grid.slide-right{
-
-    transform:translateX(40px);
-
-    opacity:0;
-
-}
-
-.cal-grid.from-left{
-
-    transform:translateX(-40px);
-
-    opacity:0;
-
-}
-
-.cal-grid.from-right{
-
-    transform:translateX(40px);
-
-    opacity:0;
-
-}
-
-.cal-day{
-
-    min-height:32px;
-
-    white-space:nowrap;
-
-}
-
-.cal-day.important{
-
-    position:relative;
-
-    border:2px solid var(--event-color,#4A90E2);
-
-    border-radius:29%;
-
-    width:28px;
-
-    height:23px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin:auto;
-
-    transition:.25s;
-}
-
-.cal-day.important:hover{
-
-    transform:scale(1.08);
-
-}
 /*==================================================
 =            CELDAS DEL CALENDARIO
 ==================================================*/
@@ -296,7 +196,6 @@
   background:#E8F1FF;
 
 }
-
 /*==================================================
 =            DÍA ACTUAL
 ==================================================*/
@@ -319,7 +218,6 @@
   font-weight:bold;
 
 }
-
 /*==================================================
 =            BARRA INFERIOR "Hoy"
 ==================================================*/
@@ -343,4 +241,3 @@
   color:#333;
 
 }
-
