@@ -3,141 +3,172 @@
 ==================================================*/
 :root{
 
-    --calendar-bg:#FFE4C6;
-    --calendar-border:#F0623E;
+  --xp-blue:#0055E5;
+  --xp-blue-dark:#003EA6;
+  --xp-bg:#ECE9D8;
+  --xp-panel:#F7F6F2;
+  --xp-shadow:#808080;
+  --xp-light:#FFFFFF;
 
 }
 
 /*==================================================
 =            CONTENEDOR PRINCIPAL
 ==================================================*/
-#calendar{
+#calendar-window{
 
-    width:100%;
-    max-width:260px;
+  background:var(--xp-bg);
 
-    margin:auto;
+  border:2px solid var(--xp-blue-dark);
 
-    padding:12px;
+  box-shadow:
+      inset 1px 1px 0 #8CB4FF,
+      inset -1px -1px 0 #18357C;
 
-    box-sizing:border-box;
+  border-radius:0;
 
-    background:var(--calendar-bg);
-
-    border:3px solid var(--calendar-border);
-
-    border-radius:18px;
+  overflow:hidden;
 
 }
 
 /*==================================================
 =            CONTENEDOR DEL ENCABEZADO
 ==================================================*/
-.cal-header{
+.xp-titlebar{
 
-    display:flex;
+  height:28px;
 
-    align-items:center;
+  background:linear-gradient(
+      to bottom,
+      #2A86FF 0%,
+      #1668F5 40%,
+      #0055E5 100%
+  );
 
-    justify-content:space-between;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    gap:10px;
+  padding:0 6px;
 
-    margin-bottom:14px;
+  color:white;
+
+  font-family:Tahoma,sans-serif;
+  font-size:13px;
+  font-weight:bold;
 
 }
 /*==================================================
 =            BOTONES DE NAVEGACIÓN
 ==================================================*/
-.cal-nav-btn{
+.xp-buttons{
+  display:flex;
+  gap:3px;
+}
 
-    width:34px;
+.xp-btn{
 
-    height:34px;
+  width:18px;
+  height:18px;
 
-    display:flex;
+  background:linear-gradient(#FFFFFF,#C8D4E8);
 
-    align-items:center;
+  border:1px solid #34538B;
 
-    justify-content:center;
+  color:#1E376D;
 
-    border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    border-radius:50%;
+  font-size:11px;
 
-    background:#F9A336;
+}
 
-    color:#FFFFFF;
+.xp-btn.close{
 
-    font-size:16px;
+  background:linear-gradient(#FF9D82,#D94B2B);
 
-    font-weight:bold;
+  color:white;
 
-    cursor:pointer;
-
-    transition:.2s;
+  border-color:#8A0000;
 
 }
 
 /*==================================================
 =            ENCABEZADO
 ==================================================*/
-.cal-title{
+.calendar-header{
 
-    margin:0;
+  padding:12px;
 
-    flex:1;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    text-align:center;
+}
 
-    font-family:"Segoe UI", Arial, sans-serif;
+.calendar-header h2{
 
-    font-size:18px;
+  color:#06398C;
 
-    font-weight:700;
+  font-size:20px;
 
-    color:#F0623E;
+  font-family:Tahoma,sans-serif;
 
-    letter-spacing:.3px;
+  text-transform:uppercase;
 
-    line-height:1.2;
+}
 
-    white-space:nowrap;
+.calendar-header button{
+
+  width:34px;
+  height:28px;
+
+  background:linear-gradient(#FCFCFC,#D8D8D8);
+
+  border-top:2px solid white;
+  border-left:2px solid white;
+  border-right:2px solid #808080;
+  border-bottom:2px solid #808080;
+
+  color:#35538A;
+
+}
+.calendar-header button:hover{
+
+  background:linear-gradient(#FFFFFF,#ECECEC);
+
+}
+
+.calendar-header button:active{
+
+  border-top:2px solid #808080;
+  border-left:2px solid #808080;
+  border-right:2px solid white;
+  border-bottom:2px solid white;
 
 }
 
 /*==================================================
 =            DÍAS DE LA SEMANA
 ==================================================*/
-.cal-weekdays{
+.weekdays{
 
-    display:grid;
+  background:#F7F6F2;
 
-    grid-template-columns:repeat(7,minmax(0,1fr));
-
-    gap:3px;
-
-    margin-bottom:10px;
+  border-top:1px solid #C5C5C5;
+  border-bottom:1px solid #C5C5C5;
 
 }
 
-.cal-weekday{
+.weekdays div{
 
-    display:flex;
+  color:#214D96;
 
-    justify-content:center;
+  font-weight:bold;
 
-    align-items:center;
-
-    font-family:"Segoe UI", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    color:#F0623E;
-
-    user-select:none;
+  font-family:Tahoma,sans-serif;
 
 }
 
@@ -247,81 +278,69 @@
 /*==================================================
 =            CELDAS DEL CALENDARIO
 ==================================================*/
-.cal-day{
+.day{
 
-    cursor:pointer;
+  background:#FDFDFB;
 
-    display:flex;
+  color:#222;
 
-    justify-content:center;
+  border:1px solid transparent;
 
-    align-items:center;
+  font-family:Tahoma,sans-serif;
 
-    aspect-ratio:1/1;
+}
+.day:hover{
 
-    min-height:28px;
+  border-color:#7FA9FF;
 
-    white-space:nowrap;
-
-    border-radius:8px;
-
-    font-family:"Segoe UI", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    color:#5A4A42;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    transition:
-        background .25s ease,
-        color .25s ease,
-        transform .15s ease,
-        box-shadow .25s ease;
+  background:#E8F1FF;
 
 }
 
 /*==================================================
 =            DÍA ACTUAL
 ==================================================*/
-.cal-today{
+.day.today{
 
-    background:#F0623E;
+  background:
+  linear-gradient(
+      #2D84FF,
+      #0055E5
+  );
 
-    color:#FFFFFF;
+  color:white;
 
-    font-weight:700;
+  border:1px solid white;
 
-    border-radius:50%;
+  box-shadow:
+      inset 1px 1px 0 rgba(255,255,255,.8),
+      inset -1px -1px 0 rgba(0,0,70,.4);
 
-    box-shadow:0 3px 10px rgba(240,98,62,.35);
+  font-weight:bold;
 
 }
 
 /*==================================================
-=            HOVER SOBRE LOS DÍAS
+=            BARRA INFERIOR "Hoy"
 ==================================================*/
+.xp-statusbar{
 
-.cal-day:hover{
-    
-    background:#F9A336;
+  height:24px;
 
-    color:#FFFFFF;
+  background:#D6D3CE;
 
-    transform:scale(1.08);
+  border-top:1px solid white;
 
-    box-shadow:0 4px 10px rgba(240,98,62,.30);
+  display:flex;
+  align-items:center;
+
+  padding:0 8px;
+
+  font-family:Tahoma,sans-serif;
+
+  font-size:12px;
+
+  color:#333;
 
 }
 
-.cal-today:hover{
-
-    background:#F0623E;
-
-    color:#FFFFFF;
-
-}
