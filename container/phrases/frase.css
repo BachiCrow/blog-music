@@ -187,24 +187,18 @@
     background: #e81123;
     color: white;
 
-    border: 1px solid #ffffff;
+    border: 1px solid #8b0000;
 
     font-weight: bold;
     text-align: center;
 
     text-shadow: 1px 1px 0 rgba(0,0,0,.35);
+
+    cursor: default;
 }
 
-
-.xp-button.close:hover {
-
-    background:
-        linear-gradient(
-            to bottom,
-            #ffad9d,
-            #ed4026
-        );
-
+.xp-close:hover{
+    background: #ff3b3b;
 }
 
 
