@@ -32,8 +32,8 @@ function random(min,max){
 }
 
 function randomEmoji(){
-    return SETTINGS.emojis[
-        Math.floor(Math.random()*SETTINGS.emojis.length)
+    return EMOJI_SETTINGS.emojis[
+        Math.floor(Math.random()*EMOJI_SETTINGS.emojis.length)
     ];
 }
 
@@ -47,18 +47,18 @@ function createEmoji(){
     emoji.style.left = random(0,100) + "vw";
 
     emoji.style.fontSize =
-        random(SETTINGS.minSize,SETTINGS.maxSize) + "px";
+        random(EMOJI_SETTINGS.minSize,EMOJI_SETTINGS.maxSize) + "px";
 
 const finalOpacity = Math.min(
-    SETTINGS.opacityMax,
+    EMOJI_SETTINGS.opacityMax,
     Math.max(
-        SETTINGS.opacityMin,
-        random(SETTINGS.opacityMin, SETTINGS.opacityMax) + opacityBoost
+        EMOJI_SETTINGS.opacityMin,
+        random(EMOJI_SETTINGS.opacityMin, EMOJI_SETTINGS.opacityMax) + opacityBoost
     )
 );
 
 emoji.style.animationDuration =
-    random(SETTINGS.minDuration, SETTINGS.maxDuration) + durationBoost + "s";
+    random(EMOJI_SETTINGS.minDuration, EMOJI_SETTINGS.maxDuration) + durationBoost + "s";
 
 emoji.style.setProperty("--emoji-opacity", finalOpacity);
 emoji.style.setProperty("--emoji-blur", blur + "px");
@@ -66,11 +66,11 @@ emoji.style.setProperty("--emoji-scale", scale);
 emoji.style.setProperty("--emoji-glow", glow);
 
     emoji.style.animationDelay =
-        random(0,SETTINGS.delayMax) + "s";
+        random(0,EMOJI_SETTINGS.delayMax) + "s";
 
     emoji.style.setProperty(
         "--drift",
-        random(SETTINGS.driftMin,SETTINGS.driftMax) + "px"
+        random(EMOJI_SETTINGS.driftMin,EMOJI_SETTINGS.driftMax) + "px"
     );
 
 
@@ -127,7 +127,7 @@ if(depth < 0.33){
    CREAR LLUVIA
 ===================================================== */
 
-for(let i=0;i<SETTINGS.amount;i++){
+for(let i=0;i<EMOJI_SETTINGS.amount;i++){
     createEmoji();
 }
 
