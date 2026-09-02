@@ -138,34 +138,7 @@
 /*==================================================
 =            BOTONES DE NAVEGACIÓN
 ==================================================*/
-.calendar-header button{
 
-  width:34px;
-  height:28px;
-
-  background:linear-gradient(#FCFCFC,#D8D8D8);
-
-  border-top:2px solid white;
-  border-left:2px solid white;
-  border-right:2px solid #808080;
-  border-bottom:2px solid #808080;
-
-  color:#35538A;
-
-}
-.calendar-header button:hover{
-
-  background:linear-gradient(#FFFFFF,#ECECEC);
-
-}
-.calendar-header button:active{
-
-  border-top:2px solid #808080;
-  border-left:2px solid #808080;
-  border-right:2px solid white;
-  border-bottom:2px solid white;
-
-}
 /*==================================================
 =            ENCABEZADO
 ==================================================*/
