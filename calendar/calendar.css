@@ -1,1 +1,188 @@
+/*==================================================
+=            CALENDARIO XP v2.0 - ETAPA 1
+==================================================*/
 
+:root{
+
+    --xp-blue:#0055E5;
+    --xp-blue-light:#2D8CFF;
+    --xp-blue-dark:#003C9E;
+
+    --xp-window:#ECE9D8;
+    --xp-panel:#F7F6F2;
+
+    --xp-border-light:#FFFFFF;
+    --xp-border-dark:#7B7B7B;
+
+    --xp-status:#D6D3CE;
+
+}
+
+/*==================================================
+=            VENTANA PRINCIPAL
+==================================================*/
+
+#xp-calendar-window{
+
+    width:100%;
+    max-width:300px;
+
+    margin:auto;
+
+    background:var(--xp-window);
+
+    border:2px solid var(--xp-blue-dark);
+
+    box-shadow:
+        inset 1px 1px 0 #8FB9FF,
+        inset -1px -1px 0 #1A347B,
+        2px 2px 6px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    font-family:Tahoma, Verdana, sans-serif;
+
+    box-sizing:border-box;
+
+}
+
+/*==================================================
+=            BARRA SUPERIOR XP
+==================================================*/
+
+.xp-cal-titlebar{
+
+    height:30px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #4EA1FF 0%,
+        #2B86FF 35%,
+        #1368F5 70%,
+        #0055E5 100%
+    );
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6px;
+
+    color:white;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.45),
+        inset 0 -1px rgba(0,40,120,.55);
+
+}
+
+/*==================================================
+=            TÍTULO
+==================================================*/
+
+.xp-cal-title{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    font-size:13px;
+    font-weight:bold;
+
+    text-shadow:0 1px rgba(0,0,0,.25);
+
+}
+
+.xp-cal-icon{
+    font-size:14px;
+}
+
+/*==================================================
+=            BOTONES XP
+==================================================*/
+
+.xp-cal-window-buttons{
+
+    display:flex;
+    gap:3px;
+
+}
+
+.xp-cal-window-btn{
+
+    width:18px;
+    height:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(#FFFFFF,#CDD9EE);
+
+    border-top:1px solid white;
+    border-left:1px solid white;
+    border-right:1px solid #51698C;
+    border-bottom:1px solid #51698C;
+
+    color:#28477C;
+
+    font-size:11px;
+    line-height:1;
+
+    user-select:none;
+
+}
+
+.xp-cal-window-btn.close{
+
+    background:
+        linear-gradient(#FFA98C,#D94824);
+
+    color:white;
+
+    border-right:1px solid #7D0000;
+    border-bottom:1px solid #7D0000;
+
+}
+
+/*==================================================
+=            CUERPO DE LA VENTANA
+==================================================*/
+
+.xp-cal-body{
+
+    background:var(--xp-panel);
+
+    min-height:250px;
+
+    padding:14px;
+
+    box-shadow:
+        inset 0 1px white;
+
+}
+
+/*==================================================
+=            BARRA DE ESTADO
+==================================================*/
+
+.xp-cal-statusbar{
+
+    height:24px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8px;
+
+    background:var(--xp-status);
+
+    border-top:1px solid white;
+
+    color:#444;
+
+    font-size:11px;
+
+}
