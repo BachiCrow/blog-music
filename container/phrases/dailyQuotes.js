@@ -114,7 +114,7 @@ async function showQuote() {
     await typeText(
         quote.text,
         quoteText,
-        SETTINGS.typingSpeed
+        QUOTES_SETTINGS.typingSpeed
     );
 
 
@@ -123,7 +123,7 @@ async function showQuote() {
         quoteAuthor.textContent =
             "— " + quote.author;
 
-    }, SETTINGS.authorDelay);
+    }, QUOTES_SETTINGS.authorDelay);
 
 }
 
