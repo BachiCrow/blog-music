@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     function xpCalRender(month,year){
 
-        xpCalGrid.innerHTML="";
+        
 
         xpCalMonthLabel.textContent=
             `${xpCalMonths[month].toUpperCase()} ${year}`;
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         }
 
-        xpCalGrid.appendChild(fragment);
+        xpCalGrid.replaceChildren(fragment);
 
         /* ---------- Barra inferior ---------- */
 
