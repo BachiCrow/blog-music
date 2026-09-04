@@ -10,7 +10,7 @@ const quotes = [
 
     {
         text: "Sera mejor que todos nos aceptemos, porque todos estamos más o menos",
-        author: "Charales"
+        author: "Maire Wink"
     },
 
     {
@@ -24,6 +24,14 @@ const quotes = [
    {
         text: "No quiero ser una milanesa",
         author: "tssszzlkdppss"
+    },
+      {
+        text: "¿q iba a hacer?",
+        author: "me duele la mente"
+    },
+   {
+        text: "Ser adulto: ★☆☆☆☆",
+        author: "Horrible experiencia, no lo recomiendo"
     }
     
 ];
