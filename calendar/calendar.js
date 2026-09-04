@@ -13,16 +13,16 @@ const today=new Date();
 let currentMonth=today.getMonth();
 let currentYear=today.getFullYear();
 
-const monthLabel=document.getElementById("xpMonthYear");
-const grid=document.getElementById("xpCalendarGrid");
-const prevBtn=document.getElementById("xpPrevMonth");
-const nextBtn=document.getElementById("xpNextMonth");
+const xpMonthLabel = document.getElementById("xpMonthYear");
+const xpGrid = document.getElementById("xpCalendarGrid");
+const xpPrevBtn = document.getElementById("xpPrevMonth");
+const xpNextBtn = document.getElementById("xpNextMonth");
 
 function renderCalendar(month,year){
 
-  grid.innerHTML="";
+  xpGrid.innerHTML="";
 
-  monthLabel.textContent=`${XP_MONTHS[month]} ${year}`;
+  xpMonthLabel.textContent=`${XP_MONTHS[month]} ${year}`;
 
   XP_WEEKDAYS.forEach(day=>{
 
@@ -30,7 +30,7 @@ function renderCalendar(month,year){
     weekday.className="xp-cal-weekday";
     weekday.textContent=day;
 
-    grid.appendChild(weekday);
+    xpGrid.appendChild(weekday);
 
   });
 
@@ -44,7 +44,7 @@ function renderCalendar(month,year){
     day.className="xp-cal-day other-month";
     day.textContent=daysPrevMonth-i;
 
-    grid.appendChild(day);
+    xpGrid.appendChild(day);
 
   }
 
@@ -54,7 +54,7 @@ function renderCalendar(month,year){
     day.className="xp-cal-day";
     day.textContent=dayNum;
 
-    grid.appendChild(day);
+    xpGrid.appendChild(day);
 
   }
 
@@ -67,13 +67,13 @@ function renderCalendar(month,year){
     day.className="xp-cal-day other-month";
     day.textContent=i;
 
-    grid.appendChild(day);
+    xpGrid.appendChild(day);
 
   }
 
 }
 
-prevBtn.addEventListener("click",()=>{
+xpPrevBtn.addEventListener("click",()=>{
 
   currentMonth--;
 
@@ -86,7 +86,7 @@ prevBtn.addEventListener("click",()=>{
 
 });
 
-nextBtn.addEventListener("click",()=>{
+xpNextBtn.addEventListener("click",()=>{
 
   currentMonth++;
 
