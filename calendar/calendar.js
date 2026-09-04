@@ -1,7 +1,3 @@
-/* ======================================================
-   CALENDARIO XP v2.5
-====================================================== */
-
 const xpCalMonths=[
     "Enero","Febrero","Marzo","Abril","Mayo","Junio",
     "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
