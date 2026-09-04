@@ -104,7 +104,7 @@
 
 
 /* =====================================================
-   BOTONES
+   BOTONES DE LA VENTANA (Windows XP)
 ===================================================== */
 
 .xp-buttons {
@@ -116,7 +116,6 @@
 .xp-button {
     width: 18px;
     height: 18px;
-
     padding: 0;
     margin: 0;
 
@@ -134,34 +133,56 @@
         inset -1px -1px #404040,
         inset 1px 1px #dfdfdf;
 
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, Arial, sans-serif;
     font-size: 13px;
     font-weight: bold;
     line-height: 1;
 
     cursor: default;
+    user-select: none;
 }
 
-/* Botón minimizar */
+/* Minimizar (gris clásico XP) */
 .xp-button.minimize {
-    color: #000000;
+    color: #222;
 }
 
-/* Botón cerrar */
+/* Cerrar (rojo clásico XP) */
 .xp-button.close {
-    color: #c00000;
+    background: linear-gradient(to bottom, #ffb4b4 0%, #f24a4a 45%, #c40000 100%);
+    color: #ffffff;
+
+    border: 1px solid #7a0000;
+    border-top-color: #ffd6d6;
+    border-left-color: #ffd6d6;
+
+    box-shadow:
+        inset -1px -1px #7a0000,
+        inset 1px 1px #ffdede;
 }
 
-/* Efecto al presionar */
-.xp-button:active {
+/* Efecto al presionar SOLO el botón gris */
+.xp-button.minimize:active {
     border-top-color: #404040;
     border-left-color: #404040;
-
     border-right-color: #ffffff;
     border-bottom-color: #ffffff;
 
-    box-shadow:
-        inset 1px 1px #808080;
+    box-shadow: inset 1px 1px #808080;
+
+    transform: translate(1px, 1px);
+}
+
+/* Efecto al presionar SOLO el botón rojo */
+.xp-button.close:active {
+    background: linear-gradient(to bottom, #c90000, #8f0000);
+
+    border-top-color: #650000;
+    border-left-color: #650000;
+    border-right-color: #ffbcbc;
+    border-bottom-color: #ffbcbc;
+
+    box-shadow: inset 1px 1px #7a0000;
 
     transform: translate(1px, 1px);
 }
