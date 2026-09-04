@@ -3,20 +3,25 @@
 ===================================================== */
 
 /* Área donde aparece la frase */
-.xp-content{
-    background: #ffffff;
-    border: 1px inset #ffffff;
+.xp-window{
 
-    padding: 15px 10px;      /* Espacio interno */
+    background:#ECE9D8;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;      /* Centra horizontalmente */
+    border:2px solid #003C9E;
 
-    text-align: center;       /* Centra el texto */
-    min-height: 140px;
-    box-sizing: border-box;
+    box-shadow:
+        inset 1px 1px 0 #8FB9FF,
+        inset -1px -1px 0 #1A347B,
+        2px 2px 6px rgba(0,0,0,.18);
+
+    border-radius:0;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+    width:100%;
+
 }
 
 /* Frase */
