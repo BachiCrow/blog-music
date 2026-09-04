@@ -1,92 +1,161 @@
-/* ==============================================
-   CALENDARIO XP v2.0 - ETAPA 2
-============================================== */
+/* ======================================================
+   CALENDARIO XP v2.5
+   Base limpia para Blogger - BachiCrow ✨
+====================================================== */
 
-const XP_MONTHS=[
-  "Enero","Febrero","Marzo","Abril","Mayo","Junio",
-  "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+const xpCalMonths=[
+    "Enero","Febrero","Marzo","Abril","Mayo","Junio",
+    "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
 ];
 
-const XP_WEEKDAYS=["L","M","X","J","V","S","D"];
+const xpCalWeekdays=["L","M","X","J","V","S","D"];
 
-const today=new Date();
-let currentMonth=today.getMonth();
-let currentYear=today.getFullYear();
+const xpCalToday=new Date();
 
-const xpMonthLabel = document.getElementById("xpMonthYear");
-const xpGrid = document.getElementById("xpCalendarGrid");
-const xpPrevBtn = document.getElementById("xpPrevMonth");
-const xpNextBtn = document.getElementById("xpNextMonth");
+let xpCalCurrentMonth=xpCalToday.getMonth();
+let xpCalCurrentYear=xpCalToday.getFullYear();
 
-function renderCalendar(month,year){
+/* ======================================================
+   INICIALIZACIÓN
+====================================================== */
 
-  xpGrid.innerHTML="";
+document.addEventListener("DOMContentLoaded",()=>{
 
-  xpMonthLabel.textContent=`${XP_MONTHS[month]} ${year}`;
+    const xpCalGrid=document.getElementById("xpCalendarGrid");
+    const xpCalMonthLabel=document.getElementById("xpMonthYear");
+    const xpCalPrevBtn=document.getElementById("xpPrevMonth");
+    const xpCalNextBtn=document.getElementById("xpNextMonth");
+    const xpCalStatus=document.querySelector(".xp-cal-statusbar");
 
-  XP_WEEKDAYS.forEach(day=>{
+    if(!xpCalGrid||!xpCalMonthLabel) return;
 
-    const weekday=document.createElement("div");
-    weekday.className="xp-cal-weekday";
-    weekday.textContent=day;
+    /* =============================================== */
 
-    xpGrid.appendChild(weekday);
+    function xpCalRender(month,year){
 
-  });
+        xpCalGrid.innerHTML="";
 
-  const firstDay=(new Date(year,month,1).getDay()+6)%7;
-  const daysInMonth=new Date(year,month+1,0).getDate();
-  const daysPrevMonth=new Date(year,month,0).getDate();
+        xpCalMonthLabel.textContent=
+            `${xpCalMonths[month].toUpperCase()} ${year}`;
 
-  for(let i=firstDay-1;i>=0;i--){
+        const fragment=document.createDocumentFragment();
 
-    const day=document.createElement("div");
-    day.className="xp-cal-day other-month";
-    day.textContent=daysPrevMonth-i;
+        /* ---------- Semana ---------- */
 
-    xpGrid.appendChild(day);
+        xpCalWeekdays.forEach(letter=>{
 
-  }
+            const cell=document.createElement("div");
+            cell.className="xp-cal-weekday";
+            cell.textContent=letter;
 
-  for(let dayNum=1;dayNum<=daysInMonth;dayNum++){
+            fragment.appendChild(cell);
 
-    const day=document.createElement("div");
-    day.className="xp-cal-day";
-    day.textContent=dayNum;
+        });
 
-    xpGrid.appendChild(day);
+        /* ---------- Primer día ---------- */
 
-  }
+        const firstDay=(new Date(year,month,1).getDay()+6)%7;
 
-  const totalCells=xpGrid.children.length;
-  const remaining=42-(totalCells-7);
+        const daysThisMonth=new Date(year,month+1,0).getDate();
+        const daysPrevMonth=new Date(year,month,0).getDate();
 
-  for(let i=1;i<=remaining;i++){
+        /* ---------- Mes anterior ---------- */
 
-    const day=document.createElement("div");
-    day.className="xp-cal-day other-month";
-    day.textContent=i;
+        for(let i=firstDay-1;i>=0;i--){
 
-    xpGrid.appendChild(day);
+            const cell=document.createElement("div");
+            cell.className="xp-cal-day other-month";
+            cell.textContent=daysPrevMonth-i;
 
-  }
+            fragment.appendChild(cell);
 
-}
+        }
 
-xpPrevBtn.addEventListener("click", () => {
-  currentMonth--;
-  if (currentMonth < 0) {
-    currentMonth = 11;
-    currentYear--;
-  }
-  renderCalendar(currentMonth, currentYear);
-});
+        /* ---------- Mes actual ---------- */
 
-xpNextBtn.addEventListener("click", () => {
-  currentMonth++;
-  if (currentMonth > 11) {
-    currentMonth = 0;
-    currentYear++;
-  }
-  renderCalendar(currentMonth, currentYear);
+        for(let day=1;day<=daysThisMonth;day++){
+
+            const cell=document.createElement("div");
+            cell.className="xp-cal-day";
+            cell.textContent=day;
+
+            const isToday=
+                day===xpCalToday.getDate() &&
+                month===xpCalToday.getMonth() &&
+                year===xpCalToday.getFullYear();
+
+            if(isToday){
+                cell.classList.add("today");
+            }
+
+            fragment.appendChild(cell);
+
+        }
+
+        /* ---------- Completar hasta 42 ---------- */
+
+        const cellsCreated=firstDay+daysThisMonth;
+        const remaining=42-cellsCreated;
+
+        for(let i=1;i<=remaining;i++){
+
+            const cell=document.createElement("div");
+            cell.className="xp-cal-day other-month";
+            cell.textContent=i;
+
+            fragment.appendChild(cell);
+
+        }
+
+        xpCalGrid.appendChild(fragment);
+
+        /* ---------- Barra inferior ---------- */
+
+        const dateText=xpCalToday.toLocaleDateString("es-AR",{
+            weekday:"long",
+            day:"numeric",
+            month:"long",
+            year:"numeric"
+        });
+
+        if(xpCalStatus){
+            xpCalStatus.textContent=`Hoy: ${dateText}`;
+        }
+
+    }
+
+    /* =============================================== */
+    /* NAVEGACIÓN */
+    /* =============================================== */
+
+    xpCalPrevBtn.addEventListener("click",()=>{
+
+        xpCalCurrentMonth--;
+
+        if(xpCalCurrentMonth<0){
+            xpCalCurrentMonth=11;
+            xpCalCurrentYear--;
+        }
+
+        xpCalRender(xpCalCurrentMonth,xpCalCurrentYear);
+
+    });
+
+    xpCalNextBtn.addEventListener("click",()=>{
+
+        xpCalCurrentMonth++;
+
+        if(xpCalCurrentMonth>11){
+            xpCalCurrentMonth=0;
+            xpCalCurrentYear++;
+        }
+
+        xpCalRender(xpCalCurrentMonth,xpCalCurrentYear);
+
+    });
+
+    /* =============================================== */
+
+    xpCalRender(xpCalCurrentMonth,xpCalCurrentYear);
+
 });
