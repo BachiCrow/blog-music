@@ -21,6 +21,17 @@
     box-sizing:border-box;
 
     width:100%;
+   
+   /* Área interior de la ventana */
+.xp-content{
+    background: #FFFDF7;
+    padding: 16px 14px 14px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 }
 
