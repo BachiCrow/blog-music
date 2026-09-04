@@ -73,30 +73,20 @@ function renderCalendar(month,year){
 
 }
 
-xpPrevBtn.addEventListener("click",()=>{
-
+xpPrevBtn.addEventListener("click", () => {
   currentMonth--;
-
-  if(currentMonth<0){
-    currentMonth=11;
+  if (currentMonth < 0) {
+    currentMonth = 11;
     currentYear--;
   }
-
-  renderCalendar(currentMonth,currentYear);
-
+  renderCalendar(currentMonth, currentYear);
 });
 
-xpNextBtn.addEventListener("click",()=>{
-
+xpNextBtn.addEventListener("click", () => {
   currentMonth++;
-
-  if(currentMonth>11){
-    currentMonth=0;
+  if (currentMonth > 11) {
+    currentMonth = 0;
     currentYear++;
   }
-
-  renderCalendar(currentMonth,currentYear);
-
+  renderCalendar(currentMonth, currentYear);
 });
-
-renderCalendar(currentMonth,currentYear);
