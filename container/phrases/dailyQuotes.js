@@ -139,17 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Mostrar la fecha en la barra inferior.
-    if (quoteDay) {
-        const today = new Date();
-
-        quoteDay.textContent = today.toLocaleDateString("es-AR", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        });
-    }
-
     showQuote();
 
 });
