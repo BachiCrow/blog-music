@@ -58,7 +58,7 @@ function renderCalendar(month,year){
 
   }
 
-  const totalCells=grid.children.length;
+  const totalCells=xpGrid.children.length;
   const remaining=42-(totalCells-7);
 
   for(let i=1;i<=remaining;i++){
